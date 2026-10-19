@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Empresa · BEBEPUNT</title><meta name="description" content="Sobre BEBEPUNT">
+<link rel="canonical" href="https://ferre33.github.io/pruebapaginaweb.github.io/"><meta property="og:url" content="https://ferre33.github.io/pruebapaginaweb.github.io/">
+<meta property="og:title" content="BEBEPUNT · Moda y ropa de bebé"><meta property="og:image" content="https://ferre33.github.io/pruebapaginaweb.github.io/img/nios-bebepunt.png">
+<!-- TIPOGRAFÍA: Comfortaa (Google Fonts) para TODA la web -->
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+<link rel="icon" href="img/niños-bebepunt.png"><link rel="stylesheet" href="../css/styles.css">
+</head><body class="interior">
+<!-- ========== CABECERA / MENÚ (logo, menú, selector idioma ES/EN, acceso B2B, redes) ========== -->
+<header id="cabecera">
+ <a class="logo" href="../"><img src="../img/logo-bebepunt-largo.png" alt="BEBEPUNT" style="background:#FFFFFF;border-radius:12px;padding:4px"></a>
+ <button id="burger" aria-label="Menú">☰</button>
+ <ul id="menu">
+  <li><a href="../"><span class="" data-es="INICIO" data-en="HOME">INICIO</span></a></li>
+  <li><a href="#"><span class="" data-es="COLECCIONES" data-en="COLLECTIONS">COLECCIONES</span> ▾</a><ul class="sub">
+    <li><a href="../colecciones/#otono"><span class="" data-es="Otoño Invierno 26/27" data-en="Autumn Winter 26/27">Otoño Invierno 26/27</span></a></li>
+    <li><a href="../colecciones/#primavera"><span class="" data-es="Primavera Verano 2026" data-en="Spring Summer 2026">Primavera Verano 2026</span></a></li></ul></li>
+  <li><a href="../about/"><span class="" data-es="EMPRESA" data-en="COMPANY">EMPRESA</span></a></li>
+  <li><a href="../puntos-de-venta/"><span class="" data-es="PUNTOS DE VENTA" data-en="POINTS OF SALE">PUNTOS DE VENTA</span></a></li><li><a href="../para-tiendas/"><span data-es="PARA TIENDAS" data-en="FOR RETAILERS">PARA TIENDAS</span></a></li>
+  <li><a href="../contacto/"><span class="" data-es="CONTACTO" data-en="CONTACT">CONTACTO</span></a></li>
+  <li><a href="https://www.facebook.com/bebepunt" target="_blank">Facebook</a></li><li><a href="https://www.instagram.com/bebepunt/" target="_blank">Instagram</a></li>
+  <li class="idioma"><button data-l="es">ES</button> / <button data-l="en">EN</button></li>
+ </ul>
+</header>
+<section class="cabecera-int" style= "background:#F9F3DF" ><h1 class="reveal"><span class=""data-es="PUNTOS DE VENTA" data-en="POINTS OF SALE">PUNTOS DE VENTA</span></h1><div class="sep"></div></section><main class="wrap"><!-- Duplica un bloque .tienda por cada tienda --><!--div class="tiendas"><div class="tienda reveal"><h3>BEBEPUNT Madrid</h3><p>📍 Calle Ejemplo 1<br>📞 +34 000 000 000</p></div><div class="tienda reveal"><h3>BEBEPUNT Barcelona</h3><p>📍 Calle Ejemplo 2<br>📞 +34 000 000 000</p>-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Instrument+Sans:wght@400&display=swap" rel="stylesheet">
+
+
+<style>
+
+/* =========================================================
+   PALETA BEBEPUNT
+========================================================= */
+
+:root {
+
+    --fondo: #F9F3DF;
+    --texto: #292929;
+
+    --beige: #F0E9DF;
+    --piedra: #D6D0C6;
+    --gris: #696660;
+
+    --verde: #405247;
+    --azul: #D8E4E9;
+    --beige-calido: #EBD7B5;
+    --verde-gris: #B6C1BC;
+
+}
+
+
+/* =========================================================
+   GENERAL
+========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+
+    margin: 0;
+    padding: 0;
+
+    background: var(--fondo);
+
+    color: var(--texto);
+
+    font-family:
+        "Comfortaafortaa",
+        sans-serif;
+
+}
+
+
+/* =========================================================
+   CONTENEDOR PRINCIPAL
+========================================================= */
+
+.contenedor {
+
+    width: 100%;
+
+    max-width: 1250px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        34%
+        66%;
+
+    gap: 30px;
+
+    padding:
+        40px
+        35px;
+
+}
+
+
+/* =========================================================
+   COLUMNA IZQUIERDA
+========================================================= */
+
+.direcciones {
+
+    padding:
+        10px
+        0;
+
+}
+
+
+/* TÍTULO */
+
+.titulo {
+
+    margin:
+        0 0 45px 0;
+
+    font-family:
+        "Comfortaa",
+        sans-serif;
+
+    font-size: 52px;
+
+    line-height: 0.95;
+
+    font-weight: 600;
+
+    letter-spacing: -0.5px;
+
+}
+
+
+/* =========================================================
+   ESTABLECIMIENTO
+========================================================= */
+
+.local {
+
+    position: relative;
+
+    padding:
+        18px
+        18px
+        20px
+        20px;
+
+    margin-bottom: 10px;
+
+    border-radius: 4px;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.25s ease,
+        transform 0.25s ease;
+
+}
+
+
+/* Línea lateral */
+
+.local::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    top: 20px;
+
+    width: 2px;
+
+    height: 0;
+
+    background:
+        var(--verde);
+
+    transition:
+        height 0.25s ease;
+
+}
+
+
+/* Hover */
+
+.local:hover {
+
+    background:
+        var(--beige);
+
+}
+
+
+/* Línea al hacer hover */
+
+.local:hover::before {
+
+    height: calc(100% - 40px);
+
+}
+
+
+/* Estado seleccionado */
+
+.local.activo {
+
+    background:
+        var(--beige);
+
+}
+
+.local.activo::before {
+
+    height: calc(100% - 40px);
+
+}
+
+
+/* =========================================================
+   NOMBRE
+========================================================= */
+
+.local-nombre {
+
+    font-family:
+        "Comfortaa",
+        sans-serif;
+
+    font-weight: 600;
+
+    font-size: 25px;
+
+    line-height: 1.05;
+
+    margin-bottom: 7px;
+
+}
+
+
+/* =========================================================
+   DIRECCIÓN
+========================================================= */
+
+.local-direccion {
+
+    font-family:
+        "Comfortaa",
+        sans-serif;
+
+    font-size: 14px;
+
+    line-height: 1.55;
+
+    color:
+        var(--gris);
+
+}
+
+
+/* =========================================================
+   MAPA
+========================================================= */
+
+.mapa-container {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 550px;
+
+}
+
+
+#mapa {
+
+    width: 100%;
+
+    max-width: 700px;
+
+    height: auto;
+
+    overflow: visible;
+
+}
+
+
+/* =========================================================
+   ESPAÑA
+========================================================= */
+
+.espana {
+
+    fill:
+        var(--beige);
+
+    stroke:
+        var(--piedra);
+
+    stroke-width: 0.8;
+
+    stroke-linejoin: round;
+
+}
+
+
+/* =========================================================
+   ISLAS
+========================================================= */
+
+.isla {
+
+    fill:
+        var(--beige);
+
+    stroke:
+        var(--piedra);
+
+    stroke-width: 0.8;
+
+}
+
+
+/* =========================================================
+   MARCADORES
+========================================================= */
+
+/*
+   MUY IMPORTANTE:
+
+   No utilizamos transform: scale() en hover.
+
+   De esta manera el marcador permanece completamente
+   estable y no produce el efecto de "temblor".
+*/
+
+.marker {
+
+    cursor: pointer;
+
+    transform-box: fill-box;
+
+    transform-origin: center;
+
+}
+
+
+/* Pin */
+
+.marker-pin {
+
+    fill:
+        var(--verde);
+
+    stroke:
+        var(--fondo);
+
+    stroke-width: 2;
+
+    transition:
+        fill 0.2s ease,
+        stroke-width 0.2s ease;
+
+}
+
+
+/* Hover */
+
+.marker:hover .marker-pin {
+
+    fill:
+        var(--verde-gris);
+
+    stroke-width: 2.5;
+
+}
+
+
+/* Marcador seleccionado */
+
+.marker.activo .marker-pin {
+
+    fill:
+        var(--verde);
+
+    stroke:
+        var(--beige-calido);
+
+    stroke-width: 3;
+
+}
+
+
+/* =========================================================
+   CÍRCULO INTERIOR DEL PIN
+========================================================= */
+
+.marker-dot {
+
+    fill:
+        var(--fondo);
+
+    pointer-events:
+        none;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .contenedor {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 10px;
+
+        padding:
+            30px
+            20px;
+
+    }
+
+
+    .titulo {
+
+        font-size: 43px;
+
+        margin-bottom: 30px;
+
+    }
+
+
+    .direcciones {
+
+        order: 1;
+
+    }
+
+
+    .mapa-container {
+
+        order: 2;
+
+        min-height: auto;
+
+        padding-top: 15px;
+
+    }
+
+
+    #mapa {
+
+        max-width: 600px;
+
+    }
+
+}
+
+
+/* =========================================================
+   MÓVIL PEQUEÑO
+========================================================= */
+
+@media (max-width: 500px) {
+
+    .contenedor {
+
+        padding:
+            25px
+            15px;
+
+    }
+
+
+    .titulo {
+
+        font-size: 38px;
+
+    }
+
+
+    .local {
+
+        padding-left: 15px;
+
+    }
+
+
+    .local-nombre {
+
+        font-size: 23px;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="contenedor">
+
+
+<!-- =====================================================
+     LISTADO
+====================================================== -->
+
+<div class="direcciones">
+
+    <h2 class="titulo">
+        <br>
+        
+    </h2>
+
+    <div id="lista"></div>
+
+</div>
+
+
+<!-- =====================================================
+     MAPA
+====================================================== -->
+
+<div class="mapa-container">
+
+<svg
+    id="mapa"
+    viewBox="0 0 600 430"
+    preserveAspectRatio="xMidYMid meet"
+>
+
+
+<!-- ESPAÑA -->
+
+<path
+    id="espana"
+    class="espana">
+</path>
+
+
+<!-- BALEARES -->
+
+<ellipse
+    class="isla"
+    cx="516"
+    cy="128"
+    rx="10"
+    ry="5">
+</ellipse>
+
+<ellipse
+    class="isla"
+    cx="530"
+    cy="134"
+    rx="6"
+    ry="3">
+</ellipse>
+
+<ellipse
+    class="isla"
+    cx="505"
+    cy="139"
+    rx="5"
+    ry="3">
+</ellipse>
+
+
+<!-- CANARIAS -->
+
+<ellipse
+    class="isla"
+    cx="105"
+    cy="385"
+    rx="7"
+    ry="3">
+</ellipse>
+
+<ellipse
+    class="isla"
+    cx="120"
+    cy="380"
+    rx="6"
+    ry="3">
+</ellipse>
+
+<ellipse
+    class="isla"
+    cx="137"
+    cy="386"
+    rx="6"
+    ry="3">
+</ellipse>
+
+
+<!-- MARCADORES -->
+
+<g id="markers"></g>
+
+
+</svg>
+
+</div>
+
+</div>
+
+
+<script>
+
+
+/* =========================================================
+   ESTABLECIMIENTOS REALES
+========================================================= */
+
+/*
+   Estos establecimientos han sido comprobados online
+   como comercios que comercializan productos BEBEPUNT.
+
+   Las direcciones son las publicadas por cada comercio.
+
+   El enlace de cada punto abre Google Maps directamente
+   con esa dirección.
+*/
+
+
+const locations = [
+
+
+    /* -----------------------------------------------
+       PICCOLI CAPRICCI
+    ----------------------------------------------- */
+
+    {
+
+        nombre:
+            "Piccoli Capricci",
+
+        direccion:
+            "Avenida de Arcos, Edificio Nueva Jerez, locales 4 y 5, 11405 Jerez de la Frontera, Cádiz",
+
+        latitude:
+            36.6850,
+
+        longitude:
+            -6.1260,
+
+        color:
+            "verde"
+
+    },
+
+
+    /* -----------------------------------------------
+       ANA HIDALGO — BOLLULLOS
+    ----------------------------------------------- */
+
+    {
+
+        nombre:
+            "Ana Hidalgo · Bollullos",
+
+        direccion:
+            "Avenida Constitución, 5, 21710 Bollullos Par del Condado, Huelva",
+
+        latitude:
+            37.3419,
+
+        longitude:
+            -6.5398,
+
+        color:
+            "azul"
+
+    },
+
+
+    /* -----------------------------------------------
+       ANA HIDALGO — ESCACENA
+    ----------------------------------------------- */
+
+    {
+
+        nombre:
+            "Ana Hidalgo · Escacena",
+
+        direccion:
+            "Calle Rey Juan Carlos I, 30, 21870 Escacena del Campo, Huelva",
+
+        latitude:
+            37.4050,
+
+        longitude:
+            -6.6840,
+
+        color:
+            "beige"
+
+    },
+
+
+    /* -----------------------------------------------
+       LA ROPITA DE MI BEBÉ
+    ----------------------------------------------- */
+
+    {
+
+        nombre:
+            "La Ropita de Mi Bebé",
+
+        direccion:
+            "Ctra. Badajoz-Villanueva del Fresno, km 24,5, Badajoz",
+
+        latitude:
+            38.7000,
+
+        longitude:
+            -6.8500,
+
+        color:
+            "verde-gris"
+
+    }
+
+];
+
+
+
+/* =========================================================
+   CONTORNO ESPAÑA
+========================================================= */
+
+const spain = [
+
+[-7.4537,37.0978],
+[-7.5371,37.4289],
+[-7.1665,37.8039],
+[-7.0293,38.0758],
+[-7.3741,38.3731],
+[-7.0980,39.0301],
+[-7.4986,39.6296],
+[-7.0666,39.7119],
+[-7.0264,40.1845],
+[-6.8640,40.3309],
+[-6.8511,41.1111],
+[-6.3891,41.3818],
+[-6.6686,41.8834],
+[-7.2513,41.9183],
+[-7.4225,41.7921],
+[-8.0132,41.7909],
+[-8.2639,42.2805],
+[-8.6719,42.1347],
+[-9.0348,41.8806],
+[-8.9844,42.5928],
+[-9.3929,43.0266],
+[-7.9782,43.7483],
+[-6.7545,43.5679],
+[-5.4119,43.5742],
+[-4.3478,43.4034],
+[-3.5175,43.4559],
+[-1.9014,43.4228],
+[-1.5028,43.0340],
+[0.3380,42.5795],
+[0.7016,42.7957],
+[1.8268,42.3434],
+[2.9860,42.4730],
+[3.0395,41.8921],
+[2.0918,41.2261],
+[0.8105,41.0147],
+[0.7213,40.6783],
+[0.1067,40.1239],
+[-0.2787,39.3100],
+[0.1113,38.7385],
+[-0.4671,38.2924],
+[-0.6834,37.6424],
+[-1.4384,37.4431],
+[-2.1465,36.6741],
+[-3.4158,36.6589],
+[-4.3689,36.6778],
+[-4.9952,36.3247],
+[-5.3772,35.9469],
+[-5.8664,36.0298],
+[-6.2367,36.3677],
+[-6.5202,36.9429],
+[-7.4537,37.0978]
+
+];
+
+
+
+/* =========================================================
+   PROYECCIÓN
+========================================================= */
+
+const minLon = -10;
+
+const maxLon = 4;
+
+const minLat = 35;
+
+const maxLat = 44;
+
+const width = 520;
+
+const height = 360;
+
+
+function project(longitude, latitude) {
+
+    const x =
+        ((longitude - minLon) /
+        (maxLon - minLon))
+        * width
+        + 40;
+
+
+    const y =
+        height -
+        ((latitude - minLat) /
+        (maxLat - minLat))
+        * height
+        + 20;
+
+
+    return {
+
+        x: x,
+
+        y: y
+
+    };
+
+}
+
+
+
+/* =========================================================
+   DIBUJAR ESPAÑA
+========================================================= */
+
+let path = "";
+
+
+spain.forEach(
+
+    (coord, index) => {
+
+        const point =
+            project(
+                coord[0],
+                coord[1]
+            );
+
+
+        if (index === 0) {
+
+            path +=
+                `M ${point.x} ${point.y}`;
+
+        }
+
+        else {
+
+            path +=
+                ` L ${point.x} ${point.y}`;
+
+        }
+
+    }
+
+);
+
+
+path += " Z";
+
+
+document
+    .getElementById("espana")
+    .setAttribute(
+        "d",
+        path
+    );
+
+
+
+/* =========================================================
+   LISTADO
+========================================================= */
+
+const lista =
+    document.getElementById(
+        "lista"
+    );
+
+
+const markers =
+    document.getElementById(
+        "markers"
+    );
+
+
+
+locations.forEach(
+
+    (location, index) => {
+
+
+        /* ==============================================
+           ELEMENTO LISTADO
+        ============================================== */
+
+        const item =
+            document.createElement(
+                "div"
+            );
+
+
+        item.className =
+            "local";
+
+
+        item.innerHTML = `
+
+            <div class="local-nombre">
+                ${location.nombre}
+            </div>
+
+            <div class="local-direccion">
+                ${location.direccion}
+            </div>
+
+        `;
+
+
+        lista.appendChild(
+            item
+        );
+
+
+
+        /* ==============================================
+           POSICIÓN MAPA
+        ============================================== */
+
+        const point =
+            project(
+                location.longitude,
+                location.latitude
+            );
+
+
+
+        /* ==============================================
+           MARCADOR
+        ============================================== */
+
+        const marker =
+            document.createElementNS(
+                "http://www.w3.org/2000/svg",
+                "g"
+            );
+
+
+        marker.classList.add(
+            "marker"
+        );
+
+
+        marker.setAttribute(
+            "transform",
+            `translate(${point.x},${point.y})`
+        );
+
+
+
+        /* ==============================================
+           PIN
+
+           NO HAY NINGÚN SCALE()
+
+           Esto evita completamente
+           el efecto de temblor.
+        ============================================== */
+
+        marker.innerHTML = `
+
+            <path
+                class="marker-pin"
+                d="
+                    M 0 -14
+
+                    C -7 -14
+                    -11 -9
+                    -11 -3
+
+                    C -11 5
+                    0 15
+                    0 15
+
+                    C 0 15
+                    11 5
+                    11 -3
+
+                    C 11 -9
+                    7 -14
+                    0 -14
+
+                    Z
+                "
+            />
+
+            <circle
+                class="marker-dot"
+                cx="0"
+                cy="-3"
+                r="3.5"
+            />
+
+        `;
+
+
+        markers.appendChild(
+            marker
+        );
+
+
+
+        /* ==============================================
+           GOOGLE MAPS
+        ============================================== */
+
+        function abrirGoogleMaps() {
+
+
+            const url =
+
+                "https://www.google.com/maps/search/?api=1&query="
+
+                +
+
+                encodeURIComponent(
+                    location.direccion
+                );
+
+
+            window.open(
+                url,
+                "_blank",
+                "noopener,noreferrer"
+            );
+
+        }
+
+
+
+        /* ==============================================
+           SELECCIONAR
+        ============================================== */
+
+        function seleccionar() {
+
+
+            document
+                .querySelectorAll(
+                    ".local"
+                )
+                .forEach(
+                    el =>
+                    el.classList.remove(
+                        "activo"
+                    )
+                );
+
+
+            document
+                .querySelectorAll(
+                    ".marker"
+                )
+                .forEach(
+                    el =>
+                    el.classList.remove(
+                        "activo"
+                    )
+                );
+
+
+            item.classList.add(
+                "activo"
+            );
+
+
+            marker.classList.add(
+                "activo"
+            );
+
+        }
+
+
+
+        /* ==============================================
+           CLICK MARCADOR
+        ============================================== */
+
+        marker.addEventListener(
+            "click",
+            function(event) {
+
+                event.stopPropagation();
+
+                seleccionar();
+
+                abrirGoogleMaps();
+
+            }
+        );
+
+
+
+        /* ==============================================
+           CLICK DIRECCIÓN
+        ============================================== */
+
+        item.addEventListener(
+            "click",
+            function() {
+
+                seleccionar();
+
+                abrirGoogleMaps();
+
+            }
+        );
+
+    }
+
+);
+
+</script>
+
+</body>
+
+
+<footer><div class="wrap"><div class="pie">
+ <div><img src="../img/logo-bebepunt-largo.png" alt="BEBEPUNT" style="width:300px;border-radius:0%"></div>
+ <div><h4><span class="" data-es="CONTÁCTANOS" data-en="CONTACT US">CONTÁCTANOS</span></h4><ul><li><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#D4AF37"><path d="M536.5-503.5Q560-527 560-560t-23.5-56.5Q513-640 480-640t-56.5 23.5Q400-593 400-560t23.5 56.5Q447-480 480-480t56.5-23.5ZM480-186q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z"/></svg> Tu dirección, CP Ciudad (España)</li><li><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#D4AF37"><path d="M798-120q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-386q31 31 65 57.5t72 48.5l94-94q9-9 23.5-13.5T670-390l138 28q14 4 23 14.5t9 23.5v162q0 18-12 30t-30 12ZM241-600l66-66-17-94h-89q5 41 14 81t26 79Zm358 358q39 17 79.5 27t81.5 13v-88l-94-19-67 67ZM241-600Zm358 358Z"/></svg> +34 000 000 000</li><li><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#D4AF37"><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z"/></svg> info@bebepunt.com</li></ul></div>
+ <div><h4><span class="" data-es="SÍGUENOS" data-en="FOLLOW US">SÍGUENOS</span></h4><ul><li><a href="https://www.facebook.com/bebepunt" target="_blank"><svg width="21" height="21" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <!-- Círculo gris -->
+  <circle cx="32" cy="32" r="30" fill="#D4AF37"/>
+
+  <!-- Letra f más grande y desplazada a la derecha -->
+  <path 
+    transform="scale(1.15) translate(-2 -6)"
+    d="M35 18h-4c-3.8 0-6.3 2.6-6.3 6.6v4.4H21v5.4h3.7V46h5.6V34.4h4.2l0.9-5.4h-5.1v-3.9c0-1.6 0.4-2.5 2.5-2.5H35v-5.1z"
+    fill="#ffffff"/>
+</svg> Facebook</a></li><li><a href="https://www.instagram.com/bebepunt/" target="_blank"><svg width="21" height="21" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <!-- Círculo gris -->
+  <circle cx="32" cy="32" r="30" fill="#D4AF37"/>
+
+  <!-- Cámara grande, ligeramente a la izquierda y un pelín más abajo -->
+  <g transform="scale(1.55) translate(-12 -12)">
+    <!-- Marco de la cámara -->
+    <rect
+      x="22" y="22" width="20" height="20" rx="6" ry="6"
+      fill="none" stroke="#ffffff" stroke-width="2"
+    />
+
+    <!-- Lente -->
+    <circle
+      cx="32" cy="32" r="6"
+      fill="none" stroke="#ffffff" stroke-width="2"
+    />
+
+    <!-- Flash -->
+    <circle
+      cx="37" cy="27" r="2"
+      fill="#ffffff"
+    />
+  </g>
+</svg> Instagram</a></li></ul></div>
+ <div><h4>BEBEPUNT</h4><ul><li><a href="../about/"><span class="" data-es="Sobre nosotros" data-en="About us">Sobre nosotros</span></a></li><li><a href="../puntos-de-venta/"><span class="" data-es="Puntos de venta" data-en="Points of sale">Puntos de venta</span></a></li><li><a href="../colecciones/"><span class="" data-es="Colecciones" data-en="Collections">Colecciones</span></a></li><li><a href="../contacto/"><span class="" data-es="Contacto" data-en="Contact">Contacto</span></a></li></ul></div>
+</div><p class="copy">© 2026 BEBEPUNT · <span class="" data-es="Todos los derechos reservados" data-en="All rights reserved">Todos los derechos reservados</span> · <span class="" data-es="Política de privacidad" data-en="Privacy policy">Política de privacidad</span> | Cookies</p></div></footer>
+<script src="../js/main.js"></script></body></html>
