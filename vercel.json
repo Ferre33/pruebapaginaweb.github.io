@@ -1,0 +1,63 @@
+{
+  "cleanUrls": false,
+  "headers": [
+    {
+      "source": "/portal/(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "private, no-store"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/portal",
+      "destination": "/portal/index.html",
+      "permanent": false
+    },
+    {
+      "source": "/about",
+      "destination": "/about/index.html",
+      "permanent": false
+    },
+    {
+      "source": "/colecciones",
+      "destination": "/colecciones/index.html",
+      "permanent": false
+    },
+    {
+      "source": "/contacto",
+      "destination": "/contacto/index.html",
+      "permanent": false
+    },
+    {
+      "source": "/para-tiendas",
+      "destination": "/para-tiendas/index.html",
+      "permanent": false
+    },
+    {
+      "source": "/puntos-de-venta",
+      "destination": "/puntos-de-venta/index.html",
+      "permanent": false
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {paymentAmount,canChangeStatus} from '../server/rules.mjs';
+const o={status:'received',total:121.01,deposit_amount:60.51,deposit_paid:false,balance_paid:false,balance_requested:false};
+test('split covers exact total including odd cent',()=>{assert.equal(paymentAmount(o,'deposit'),6051);assert.equal(paymentAmount({...o,deposit_paid:true,balance_requested:true},'balance'),6050);});
+test('cannot pay remaining balance before approval to ship',()=>{assert.throws(()=>paymentAmount(o,'balance'));assert.throws(()=>paymentAmount({...o,deposit_paid:true},'balance'));});
+test('reject paid and cancelled installments',()=>{assert.throws(()=>paymentAmount({...o,deposit_paid:true},'deposit'));assert.throws(()=>paymentAmount({...o,status:'cancelled'},'deposit'));assert.throws(()=>paymentAmount({...o,balance_paid:true},'balance'));});
+test('legacy orders require commercial review',()=>{assert.throws(()=>paymentAmount({...o,total:null},'deposit'));});
+test('production and shipment gated by actual payment flags',()=>{assert.throws(()=>canChangeStatus(o,'processing'));assert.throws(()=>canChangeStatus({...o,deposit_paid:true},'shipped'));assert.doesNotThrow(()=>canChangeStatus({...o,deposit_paid:true,balance_paid:true},'shipped'));});
+test('reject unknown payment phases and statuses',()=>{assert.throws(()=>paymentAmount(o,'anything'));assert.throws(()=>canChangeStatus(o,'anything'));});
+import {paymentLines} from '../server/rules.mjs';
+test('every installment retains products and exact cents',()=>{const order={...o,order_items:[{product_snapshot:'Peto',sku_snapshot:'P-01',quantity:3,line_total:60,unit_price:20,size_snapshot:'3M',color_snapshot:'Crema'},{product_snapshot:'Conjunto',sku_snapshot:'C-01',quantity:1,line_total:40,unit_price:40,size_snapshot:'6M',color_snapshot:'Rosa'}]};const lines=paymentLines(order,'deposit');assert.equal(lines.length,2);assert.equal(lines.reduce((n,l)=>n+l.price_data.unit_amount,0),6051);assert.match(lines[0].price_data.product_data.name,/P-01 × 3/);});

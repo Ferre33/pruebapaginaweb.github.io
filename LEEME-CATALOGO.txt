@@ -1,0 +1,8 @@
+Actualización: catálogo de ejemplo y Ceremonia
+Se incluyen 22 modelos de ejemplo: 6 de Otoño Invierno, 6 de Primavera Verano y 10 de Ceremonia. El área cliente muestra estos modelos junto a los productos reales que existan en Supabase. Sus fichas se abren en páginas individuales. Los nombres, precios y medidas son orientativos; las composiciones y cuidados requieren confirmación. No se pueden añadir estos modelos de muestra a pedidos reales.
+
+La web pública muestra exactamente tres fotografías por colección. La colección Ceremonia aparece también en los menús públicos y en Para tiendas. El catálogo del área cliente muestra las diez fotografías recibidas, renombradas ceremonia1.jpg a ceremonia10.jpg. Los JPEG recibidos se conservan sin recomprimir y los PNG se convierten a JPEG con sus dimensiones originales.
+
+Para ver el catálogo de ejemplo, sube todos los archivos de esta versión y entra con una cuenta aprobada. No requiere una nueva migración SQL adicional a las de la entrega anterior. La configuración BEBEPUNT_SHOW_DEMO_CATALOG = true en portal/config.js activa los ejemplos; cambia a false para mostrar solo los productos comerciales de Supabase.
+
+Los ejemplos y sus fotografías están incluidos como recursos estáticos de demostración, accesibles por URL. No contienen tarifas ni especificaciones comerciales confidenciales. Para el catálogo comercial protegido utiliza los productos reales y el bucket privado de Supabase según esta guía; retira los recursos estáticos exclusivos cuando pases a contenido confidencial.

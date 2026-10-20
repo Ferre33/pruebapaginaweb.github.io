@@ -1,0 +1,25 @@
+import {db,stripe,need,ok,origin,member,body} from '../server/common.mjs';
+import {paymentAmount,canChangeStatus,paymentLines} from '../server/rules.mjs';
+export default async function handler(req,res){try{
+ if(!origin(req,res))return;const client=db(),{user,profile}=await member(req,client),input=body(req),action=input.action;
+ if(action==='health'){const c=ok(await client.from('commerce_settings').select('*').eq('id',true).single());need('STRIPE_SECRET_KEY');need('STRIPE_WEBHOOK_SECRET');if(!c.checkout_enabled||c.terms_version==='pending')throw Error('La venta online todavía no está habilitada.');return res.json({ready:true});}
+ const order=ok(await client.from('orders').select('*,order_items(*)').eq('id',input.order_id).single());if(order.shop_id!==user.id&&profile.role!=='admin')return res.status(403).json({error:'Pedido no autorizado.'});
+ if(action==='request-balance'||action==='order-status'){if(profile.role!=='admin')return res.status(403).json({error:'Solo administración.'});if(action==='request-balance'){if(!order.deposit_paid||order.status==='cancelled')throw Error('No se puede habilitar el saldo de este pedido.');ok(await client.from('orders').update({balance_requested:true,updated_at:new Date().toISOString()}).eq('id',order.id));}else{canChangeStatus(order,input.status);ok(await client.from('orders').update({status:input.status,updated_at:new Date().toISOString()}).eq('id',order.id));}return res.json({ok:true});}
+ const phase=input.phase;if(!['deposit','balance'].includes(phase))throw Error('Fase no válida.');const s=stripe();
+ if(action==='document'){const pay=ok(await client.from('order_payments').select('*').eq('order_id',order.id).eq('phase',phase).single());if(!pay.paid)throw Error('El pago aún no está confirmado.');const session=await s.checkout.sessions.retrieve(pay.session_id,{expand:['invoice','payment_intent.latest_charge']});const invoice=session.invoice;const url=invoice?.hosted_invoice_url||session.payment_intent?.latest_charge?.receipt_url;if(!url)throw Error('La documentación aún se está generando. Vuelve a intentarlo en unos instantes.');return res.json({url});}
+ if(action!=='checkout')return res.status(400).json({error:'Acción desconocida.'});const amount=paymentAmount(order,phase);
+ // Row is unique per order/phase; deterministic Stripe idempotency prevents duplicate sessions.
+ ok(await client.from('order_payments').upsert({order_id:order.id,phase},{onConflict:'order_id,phase',ignoreDuplicates:true}));
+ let pay=ok(await client.from('order_payments').select('*').eq('order_id',order.id).eq('phase',phase).single());
+ if(pay.paid)throw Error('Pago ya recibido. Actualiza Mis pedidos.');
+ if(pay.session_id){const previous=await s.checkout.sessions.retrieve(pay.session_id);if(previous.status==='open')return res.json({url:previous.url});if(previous.status==='complete')throw Error('Pago en confirmación. Actualiza Mis pedidos en unos instantes.');
+ const changed=ok(await client.from('order_payments').update({attempt:pay.attempt+1,session_id:null,session_url:null}).eq('order_id',order.id).eq('phase',phase).eq('attempt',pay.attempt).eq('paid',false).select());pay=changed[0]||ok(await client.from('order_payments').select('*').eq('order_id',order.id).eq('phase',phase).single());}
+ const snap=order.customer_snapshot;if(!snap)throw Error('Faltan datos de facturación.');const customer=await s.customers.create({name:snap.shop_name,email:snap.email,phone:snap.phone,address:{line1:snap.address,city:snap.city,postal_code:snap.postal_code,country:snap.country},metadata:{order_id:order.id,tax_id:snap.tax_id}}, {idempotencyKey:'customer-'+order.id});
+ const label=phase==='deposit'?'Anticipo 50 %':'Pago final 50 %';const details=order.order_items.map(i=>`${i.product_snapshot} / ${i.sku_snapshot} / ${i.size_snapshot} / ${i.color_snapshot} × ${i.quantity}`).join('; ');
+ const session=await s.checkout.sessions.create({mode:'payment',customer:customer.id,payment_method_types:['card'],client_reference_id:order.id,
+ line_items:paymentLines(order,phase),
+ metadata:{order_id:order.id,phase},payment_intent_data:{metadata:{order_id:order.id,phase}},
+ invoice_creation:{enabled:true,invoice_data:{description:`${label} del pedido #${order.order_number}. Base del pedido ${order.subtotal} EUR; impuestos ${order.tax_amount} EUR; total ${order.total} EUR. ${details}`.slice(0,1500),custom_fields:[{name:'NIF / CIF cliente',value:String(snap.tax_id).slice(0,30)},{name:'Pedido BEBEPUNT',value:String(order.order_number)}],metadata:{order_id:order.id,phase}}},
+ success_url:need('SITE_URL').replace(/\/$/,'')+'/portal/pedidos.html?pago=recibido',cancel_url:need('SITE_URL').replace(/\/$/,'')+'/portal/pedidos.html?pago=pendiente'}, {idempotencyKey:`checkout-${order.id}-${phase}-${pay.attempt}`});
+ ok(await client.from('order_payments').update({session_id:session.id,session_url:session.url}).eq('order_id',order.id).eq('phase',phase).eq('attempt',pay.attempt));return res.json({url:session.url});
+}catch(e){console.error('Commerce:',e.message);res.status(400).json({error:e.message||'No se pudo completar la operación.'});}}
