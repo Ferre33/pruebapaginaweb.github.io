@@ -4,11 +4,7 @@ const $=(s,c=document)=>c.querySelector(s),$$=(s,c=document)=>[...c.querySelecto
 addEventListener('scroll',()=>$('#cabecera')?.classList.toggle('fijo',scrollY>60));
 if($('#burger'))$('#burger').onclick=()=>$('#menu')?.classList.toggle('abierto');
 /* 2. Selector de idioma ES/EN: cada texto lleva data-es y data-en */
-function idioma(l){l=['es','en'].includes(l)?l:'es';try{localStorage.setItem('lang',l);}catch{}document.documentElement.lang=l;
- $$('[data-es]').forEach(e=>{if(e.dataset[l]!==undefined)e.innerHTML=e.dataset[l]});
- $$('.idioma button').forEach(b=>b.classList.toggle('on',b.dataset.l===l));}
-$$('.idioma button').forEach(b=>b.onclick=()=>idioma(b.dataset.l));
-let preferred='es';try{preferred=localStorage.getItem('lang')||'es';}catch{}idioma(preferred);
+function idioma(l){window.BEBEPUNT_I18N.set(l);}
 /* 3. Slider principal (cambia solo cada 6 s) */
 const sl=$$('.slide');if(sl.length){let i=0;const pts=$('.puntos');
  sl.forEach((_,k)=>{const s=document.createElement('span');s.onclick=()=>ir(k);pts.append(s)});
