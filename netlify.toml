@@ -1,0 +1,52 @@
+[build]
+  command = "node scripts/build-netlify.mjs"
+  publish = "dist"
+  functions = "netlify/functions"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+[functions]
+  node_bundler = "esbuild"
+
+[[redirects]]
+  from = "/portal"
+  to = "/portal/index.html"
+  status = 302
+
+[[redirects]]
+  from = "/about"
+  to = "/about/index.html"
+  status = 302
+
+[[redirects]]
+  from = "/colecciones"
+  to = "/colecciones/index.html"
+  status = 302
+
+[[redirects]]
+  from = "/contacto"
+  to = "/contacto/index.html"
+  status = 302
+
+[[redirects]]
+  from = "/para-tiendas"
+  to = "/para-tiendas/index.html"
+  status = 302
+
+[[redirects]]
+  from = "/puntos-de-venta"
+  to = "/puntos-de-venta/index.html"
+  status = 302
+
+[[headers]]
+  for = "/portal/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+    Cache-Control = "private, no-store"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
