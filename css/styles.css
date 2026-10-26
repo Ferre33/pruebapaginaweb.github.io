@@ -78,7 +78,7 @@ body.interior #cabecera{background:#fff;box-shadow:0 2px 14px rgba(0,0,0,.1)}
 #news label{width:100%;font-size:.85rem}#ok{display:none;color:var(--rosa);font-weight:700;margin-top:14px}
 /* PIE */
 footer{background:var(--blanco);color:#000000;padding:56px 0 22px;font-size:.88rem}
-.pie{display:grid;grid-template-columns:repeat(4,1fr);gap:34px}.pie h4{color:#fff;letter-spacing:2px;margin-bottom:12px}
+.pie{display:grid;grid-template-columns:repeat(4,1fr);gap:34px}.pie h4{color:#000000;letter-spacing:2px;margin-bottom:12px}
 .pie li{margin-bottom:8px}.pie a:hover{color:var(--rosa)}.copy{text-align:center;margin-top:36px;opacity:.7;font-size:.78rem}
 /* SUBPÁGINAS */
 .cabecera-int{padding:150px 0 40px;text-align:center;background:#FFFFFF}.cabecera-int h1{font-size:2.4rem;letter-spacing:4px}
