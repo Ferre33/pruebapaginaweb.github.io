@@ -51,3 +51,6 @@ input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px soli
  #demo-receipt tr{break-inside:avoid}#demo-receipt h2{font-size:18pt}
  @page{size:A4;margin:16mm}
 }
+
+/* Commerce stays configured, but is currently visible only to administrators. */
+body:not(.commerce-admin) a[href="carrito.html"],body:not(.commerce-admin) a[href="pedidos.html"],body:not(.commerce-admin) a[href="simulacion.html"]{display:none!important}
