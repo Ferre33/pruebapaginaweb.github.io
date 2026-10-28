@@ -44,6 +44,33 @@ def paths(doc,path,lang):
     for a in doc.xpath('//a[@href="#"][.//span[@data-es="COLECCIONES"]]'):a.set('href',route('colecciones/index.html',lang))
     for a in doc.xpath('//a[@data-privacy]'):a.set('href','/politica-privacidad-bebepunt/privacidad/index.html')
 
+def optimize_assets(doc,path):
+    manifest_file=ROOT/'scripts/image-manifest.json'
+    if not manifest_file.exists():return
+    manifest=json.loads(manifest_file.read_text())
+    by_output={v['src']:v for v in manifest.values()}
+    for img in doc.xpath('//img[@src]'):
+        src=urlsplit(urljoin('/'+path,img.get('src'))).path
+        entry=manifest.get(src) or by_output.get(src)
+        if entry:
+            img.set('src',entry['src']);img.set('width',str(entry['width']));img.set('height',str(entry['height']))
+            if 'small' in entry:
+                img.set('srcset',f"{entry['small']} {entry['small_width']}w, {entry['src']} {entry['width']}w")
+                img.set('sizes','(max-width: 700px) 100vw, 50vw')
+        if not img.xpath('ancestor::header') and not img.xpath('ancestor::section[contains(@class,"cabecera-int")]'):
+            img.set('loading','lazy')
+    for el in doc.xpath('//*[@style]|//style'):
+        value=el.get('style') if el.tag!='style' else el.text
+        if not value:continue
+        for source,entry in manifest.items():
+            value=value.replace(source,entry['src'])
+        if el.tag=='style':el.text=value
+        else:el.set('style',value)
+    head=doc.find('head')
+    if path=='index.html':
+        for el in head.xpath('./link[@id="hero-preload"]'):head.remove(el)
+        etree.SubElement(head,'link',id='hero-preload',rel='preload',href=manifest.get('/img/bebe21.png',{}).get('src','/img/bebe21.png'),**{'as':'image','type':'image/webp','fetchpriority':'high'})
+
 def build():
  for path,data in PAGES.items():
     base=html.document_fromstring((ROOT/path).read_text())
@@ -84,6 +111,7 @@ def build():
         for attr in ('alt','title','placeholder','aria-label'):
             for e in doc.xpath('//*[@data-'+attr+'-'+lang+']'):e.set(attr,e.get('data-'+attr+'-'+lang))
         paths(doc,path,lang)
+        optimize_assets(doc,path)
         head=doc.find('head');canonical=ORIGIN+route(path,lang); title=data[0 if lang=='es' else 1];desc=data[2 if lang=='es' else 3]
         for e in head.xpath('./title|./meta[@name="description" or starts-with(@property,"og:") or starts-with(@name,"twitter:")]|./link[@rel="canonical" or @hreflang]|./script[@id="seo-schema"]|./noscript[@id="seo-noscript"]'):head.remove(e)
         etree.SubElement(head,'title').text=title
