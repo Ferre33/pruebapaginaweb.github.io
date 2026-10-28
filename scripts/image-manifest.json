@@ -1,0 +1,281 @@
+{
+  "/img/artesania.png": {
+    "src": "/img/optimized/artesania.webp",
+    "width": 494,
+    "height": 478,
+    "original_bytes": 197405,
+    "bytes": 18510
+  },
+  "/img/ayora-paisaje.png": {
+    "src": "/img/optimized/ayora-paisaje.webp",
+    "width": 1360,
+    "height": 768,
+    "original_bytes": 2209044,
+    "bytes": 286856
+  },
+  "/img/bebe1.jpg": {
+    "src": "/img/optimized/bebe1.webp",
+    "width": 768,
+    "height": 1024,
+    "original_bytes": 117106,
+    "bytes": 83802,
+    "small": "/img/optimized/bebe1-640.webp",
+    "small_width": 480
+  },
+  "/img/bebe10.png": {
+    "src": "/img/optimized/bebe10.webp",
+    "width": 1402,
+    "height": 1122,
+    "original_bytes": 2190204,
+    "bytes": 143560,
+    "small": "/img/optimized/bebe10-640.webp",
+    "small_width": 640
+  },
+  "/img/bebe11.jpg": {
+    "src": "/img/optimized/bebe11.webp",
+    "width": 768,
+    "height": 1024,
+    "original_bytes": 138336,
+    "bytes": 93626,
+    "small": "/img/optimized/bebe11-640.webp",
+    "small_width": 480
+  },
+  "/img/bebe12.jpg": {
+    "src": "/img/optimized/bebe12.webp",
+    "width": 768,
+    "height": 1024,
+    "original_bytes": 96305,
+    "bytes": 55754,
+    "small": "/img/optimized/bebe12-640.webp",
+    "small_width": 480
+  },
+  "/img/bebe13.jpg": {
+    "src": "/img/optimized/bebe13.webp",
+    "width": 768,
+    "height": 1024,
+    "original_bytes": 140174,
+    "bytes": 89176,
+    "small": "/img/optimized/bebe13-640.webp",
+    "small_width": 480
+  },
+  "/img/bebe14.jpg": {
+    "src": "/img/optimized/bebe14.webp",
+    "width": 768,
+    "height": 1024,
+    "original_bytes": 131964,
+    "bytes": 87432,
+    "small": "/img/optimized/bebe14-640.webp",
+    "small_width": 480
+  },
+  "/img/bebe15.png": {
+    "src": "/img/optimized/bebe15.webp",
+    "width": 1086,
+    "height": 1448,
+    "original_bytes": 2046242,
+    "bytes": 118752,
+    "small": "/img/optimized/bebe15-640.webp",
+    "small_width": 480
+  },
+  "/img/bebe16.jpg": {
+    "src": "/img/optimized/bebe16.webp",
+    "width": 768,
+    "height": 1024,
+    "original_bytes": 181586,
+    "bytes": 134230,
+    "small": "/img/optimized/bebe16-640.webp",
+    "small_width": 480
+  },
+  "/img/bebe17.jpg": {
+    "src": "/img/optimized/bebe17.webp",
+    "width": 768,
+    "height": 1024,
+    "original_bytes": 84583,
+    "bytes": 49802,
+    "small": "/img/optimized/bebe17-640.webp",
+    "small_width": 480
+  },
+  "/img/bebe18.png": {
+    "src": "/img/optimized/bebe18.webp",
+    "width": 896,
+    "height": 1195,
+    "original_bytes": 2107152,
+    "bytes": 105516,
+    "small": "/img/optimized/bebe18-640.webp",
+    "small_width": 480
+  },
+  "/img/bebe19.jpg": {
+    "src": "/img/optimized/bebe19.webp",
+    "width": 768,
+    "height": 1024,
+    "original_bytes": 119660,
+    "bytes": 77334,
+    "small": "/img/optimized/bebe19-640.webp",
+    "small_width": 480
+  },
+  "/img/bebe2.jpg": {
+    "src": "/img/optimized/bebe2.webp",
+    "width": 768,
+    "height": 1024,
+    "original_bytes": 113191,
+    "bytes": 74422,
+    "small": "/img/optimized/bebe2-640.webp",
+    "small_width": 480
+  },
+  "/img/bebe21.png": {
+    "src": "/img/optimized/bebe21.webp",
+    "width": 1536,
+    "height": 1024,
+    "original_bytes": 2117935,
+    "bytes": 110072,
+    "small": "/img/optimized/bebe21-640.webp",
+    "small_width": 640
+  },
+  "/img/bebe22.png": {
+    "src": "/img/optimized/bebe22.webp",
+    "width": 1536,
+    "height": 1024,
+    "original_bytes": 3264285,
+    "bytes": 323408,
+    "small": "/img/optimized/bebe22-640.webp",
+    "small_width": 640
+  },
+  "/img/bebe24.png": {
+    "src": "/img/optimized/bebe24.webp",
+    "width": 1536,
+    "height": 1024,
+    "original_bytes": 2533343,
+    "bytes": 159162,
+    "small": "/img/optimized/bebe24-640.webp",
+    "small_width": 640
+  },
+  "/img/bebe3.jpg": {
+    "src": "/img/optimized/bebe3.webp",
+    "width": 768,
+    "height": 1024,
+    "original_bytes": 106768,
+    "bytes": 66262,
+    "small": "/img/optimized/bebe3-640.webp",
+    "small_width": 480
+  },
+  "/img/bebe4.jpg": {
+    "src": "/img/optimized/bebe4.webp",
+    "width": 768,
+    "height": 1024,
+    "original_bytes": 106818,
+    "bytes": 63966,
+    "small": "/img/optimized/bebe4-640.webp",
+    "small_width": 480
+  },
+  "/img/bebe5.jpg": {
+    "src": "/img/optimized/bebe5.webp",
+    "width": 768,
+    "height": 1024,
+    "original_bytes": 230228,
+    "bytes": 177346,
+    "small": "/img/optimized/bebe5-640.webp",
+    "small_width": 480
+  },
+  "/img/bebe6.jpg": {
+    "src": "/img/optimized/bebe6.webp",
+    "width": 768,
+    "height": 1024,
+    "original_bytes": 123193,
+    "bytes": 85210,
+    "small": "/img/optimized/bebe6-640.webp",
+    "small_width": 480
+  },
+  "/img/bebe8.jpg": {
+    "src": "/img/optimized/bebe8.webp",
+    "width": 768,
+    "height": 1024,
+    "original_bytes": 120356,
+    "bytes": 75320,
+    "small": "/img/optimized/bebe8-640.webp",
+    "small_width": 480
+  },
+  "/img/bebe9.png": {
+    "src": "/img/optimized/bebe9.webp",
+    "width": 1024,
+    "height": 1536,
+    "original_bytes": 2361969,
+    "bytes": 155832,
+    "small": "/img/optimized/bebe9-640.webp",
+    "small_width": 427
+  },
+  "/img/calidad.png": {
+    "src": "/img/optimized/calidad.webp",
+    "width": 460,
+    "height": 442,
+    "original_bytes": 167715,
+    "bytes": 14524
+  },
+  "/img/caricatura-abuelos.png": {
+    "src": "/img/optimized/caricatura-abuelos.webp",
+    "width": 1536,
+    "height": 1024,
+    "original_bytes": 1329886,
+    "bytes": 48546
+  },
+  "/img/cercania.png": {
+    "src": "/img/optimized/cercania.webp",
+    "width": 554,
+    "height": 518,
+    "original_bytes": 267376,
+    "bytes": 23402
+  },
+  "/img/ceremonia3.jpg": {
+    "src": "/img/optimized/ceremonia3.webp",
+    "width": 1024,
+    "height": 1536,
+    "original_bytes": 185876,
+    "bytes": 168174,
+    "small": "/img/optimized/ceremonia3-640.webp",
+    "small_width": 427
+  },
+  "/img/ceremonia5.jpg": {
+    "src": "/img/optimized/ceremonia5.webp",
+    "width": 1024,
+    "height": 1536,
+    "original_bytes": 186014,
+    "bytes": 168570,
+    "small": "/img/optimized/ceremonia5-640.webp",
+    "small_width": 427
+  },
+  "/img/ceremonia7.jpg": {
+    "src": "/img/optimized/ceremonia7.webp",
+    "width": 1024,
+    "height": 1536,
+    "original_bytes": 173434,
+    "bytes": 156398,
+    "small": "/img/optimized/ceremonia7-640.webp",
+    "small_width": 427
+  },
+  "/img/logo-bebepunt-largo.png": {
+    "src": "/img/optimized/logo-bebepunt-largo.webp",
+    "width": 1536,
+    "height": 456,
+    "original_bytes": 659771,
+    "bytes": 192936
+  },
+  "/img/manos-tejiendo.png": {
+    "src": "/img/optimized/manos-tejiendo.webp",
+    "width": 1360,
+    "height": 768,
+    "original_bytes": 1716901,
+    "bytes": 132944
+  },
+  "/img/niños-bebepunt.png": {
+    "src": "/img/optimized/niños-bebepunt.webp",
+    "width": 644,
+    "height": 518,
+    "original_bytes": 472438,
+    "bytes": 112032
+  },
+  "/img/sostenibilidad.png": {
+    "src": "/img/optimized/sostenibilidad.webp",
+    "width": 522,
+    "height": 464,
+    "original_bytes": 136325,
+    "bytes": 11772
+  }
+}

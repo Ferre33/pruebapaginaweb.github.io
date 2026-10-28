@@ -27,3 +27,17 @@ assert sorted(etree.parse(str(root/'sitemap.xml')).xpath('//*[local-name()="loc"
 for p in (root/'portal').glob('*.html'):
  assert 'noindex' in p.read_text(),p
 print('PASS: 12 public language pages, headings, canonical/hreflang, structured data, local links, sitemap and private noindex.')
+
+from PIL import Image
+manifest=json.loads((root/'scripts/image-manifest.json').read_text()) if (root/'scripts/image-manifest.json').exists() else {}
+for entry in manifest.values():
+ for key in ('src','small'):
+  if key in entry:
+   with Image.open(root/entry[key].lstrip('/')) as im:im.load()
+for p in [root/q for q in pages]+list((root/'en').rglob('*.html')):
+ doc=html.parse(str(p))
+ for img in doc.xpath('//img[@srcset]'):
+  for candidate in img.get('srcset').split(','):
+   assert (root/candidate.strip().split()[0].lstrip('/')).exists()
+assert html.parse(str(root/'index.html')).xpath('//meta[@name="google-site-verification"]')
+print('PASS: optimized images decode, responsive sources exist, verification tag present.')
