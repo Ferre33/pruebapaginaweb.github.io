@@ -1,6 +1,6 @@
 from pathlib import Path
 from lxml import html,etree
-from urllib.parse import urlsplit,unquote
+from urllib.parse import urlsplit,unquote,urljoin
 import json,runpy
 cfg=runpy.run_path(str(Path(__file__).with_name('build-seo.py')))
 root=cfg['ROOT']; pages=cfg['PAGES'];origin=cfg['ORIGIN'];urls=[]
@@ -22,7 +22,7 @@ for page in pages:
             if path.endswith('/'):target=target/'index.html'
             assert target.exists(),(file,v)
     for a in doc.xpath('//*[@data-language-link]'):
-        assert a.get('href')==cfg['route'](page,a.get('data-language-link'))
+        assert urljoin('/'+str(file.relative_to(root)),a.get('href')).removesuffix('index.html')==cfg['route'](page,a.get('data-language-link')).removesuffix('index.html')
 assert sorted(etree.parse(str(root/'sitemap.xml')).xpath('//*[local-name()="loc"]/text()'))==sorted(urls)
 for p in (root/'portal').glob('*.html'):
  assert 'noindex' in p.read_text(),p
@@ -38,6 +38,6 @@ for p in [root/q for q in pages]+list((root/'en').rglob('*.html')):
  doc=html.parse(str(p))
  for img in doc.xpath('//img[@srcset]'):
   for candidate in img.get('srcset').split(','):
-   assert (root/candidate.strip().split()[0].lstrip('/')).exists()
+   assert (root/urljoin('/'+str(p.relative_to(root)),candidate.strip().split()[0]).lstrip('/')).exists()
 assert html.parse(str(root/'index.html')).xpath('//meta[@name="google-site-verification"]')
 print('PASS: optimized images decode, responsive sources exist, verification tag present.')
