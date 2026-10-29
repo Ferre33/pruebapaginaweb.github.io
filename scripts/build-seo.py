@@ -6,7 +6,7 @@ from pathlib import Path
 from lxml import html, etree
 from PIL import Image
 from urllib.parse import urljoin, urlsplit
-import os, json, re, copy
+import os, json, re, copy, posixpath
 ROOT=Path(__file__).resolve().parents[1]
 ORIGIN=os.environ.get('SITE_ORIGIN','https://pruebapaginawebgithubio.vercel.app').rstrip('/')
 PAGES={
@@ -71,6 +71,23 @@ def optimize_assets(doc,path):
         for el in head.xpath('./link[@id="hero-preload"]'):head.remove(el)
         etree.SubElement(head,'link',id='hero-preload',rel='preload',href=manifest.get('/img/bebe21.png',{}).get('src','/img/bebe21.png'),**{'as':'image','type':'image/webp','fetchpriority':'high'})
 
+def portable_paths(doc, output_path):
+    """Keep resources and navigation within the site when hosted in a subdirectory."""
+    directory=posixpath.dirname(output_path) or '.'
+    def relative(value):
+        if not value.startswith('/') or value.startswith('//'):return value
+        parts=urlsplit(value)
+        target=parts.path.lstrip('/')
+        if not target or target.endswith('/'):target+='index.html'
+        return posixpath.relpath(target,directory)+('?' +parts.query if parts.query else '')+('#'+parts.fragment if parts.fragment else '')
+    for el in doc.iter():
+        for attr in ('href','src','action','poster'):
+            if el.get(attr):el.set(attr,relative(el.get(attr)))
+        if el.get('srcset'):
+            el.set('srcset',', '.join(relative(c.strip().split()[0])+' '+c.strip().split()[1] for c in el.get('srcset').split(',')))
+        if el.get('style'):el.set('style',re.sub(r'url\(([^)]+)\)',lambda m:'url('+relative(m[1])+')',el.get('style')))
+        if el.tag=='style' and el.text:el.text=re.sub(r'url\(([^)]+)\)',lambda m:'url('+relative(m[1])+')',el.text)
+
 def build():
  for path,data in PAGES.items():
     base=html.document_fromstring((ROOT/path).read_text())
@@ -133,6 +150,7 @@ def build():
                 a=etree.SubElement(holder,'a',href=route(path,l),hreflang=l,lang=l);a.text=l.upper();a.set('data-language-link',l)
                 if l==lang:a.set('aria-current','page')
                 a.tail=' / ' if l=='es' else ''
+        portable_paths(doc,('en/' if lang=='en' else '')+path)
         dest=ROOT/(('en/' if lang=='en' else '')+path);dest.parent.mkdir(parents=True,exist_ok=True)
         dest.write_text('<!DOCTYPE html>\n'+html.tostring(doc,encoding='unicode',method='html')+'\n')
  sitemap=etree.Element('urlset',xmlns='http://www.sitemaps.org/schemas/sitemap/0.9')
