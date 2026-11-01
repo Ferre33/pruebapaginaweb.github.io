@@ -1,6 +1,6 @@
 /* ===== BEBEPUNT · ESTILOS (edita los colores aquí) ===== */
 
-:root{--rosa:#D4AF37;--crema:#F9F3DF;--gris:#4d4d4d;--claro:#F9F3DF;--max:1180px}
+:root{--rosa:#655f59;--crema:#f2efeb;--gris:#4d4d4d;--claro:#f2efeb;--max:1180px}
 
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
@@ -54,7 +54,7 @@ body.interior #cabecera{background:#fff;box-shadow:0 2px 14px rgba(0,0,0,.1)}
 .banner{position:relative;height:420px;overflow:hidden;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
 .banner .fondo{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform 1.2s}
 .banner:hover .fondo{transform:scale(1.12)}.banner::before{content:"";position:absolute;inset:0;background:rgba(0,0,0,.33);z-index:1;transition:.4s}
-.banner:hover::before{background:rgba(212,175,55,.4)}
+.banner:hover::before{background:rgba(69,65,62,.48)}
 
 .banner>*:not(.fondo){position:relative;z-index:2}.banner h2{font-size:2.4rem;margin:6px 0 20px}
 /* OPINIONES */
@@ -68,7 +68,7 @@ body.interior #cabecera{background:#fff;box-shadow:0 2px 14px rgba(0,0,0,.1)}
 .ig-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:34px}
 .ig-grid a{position:relative;aspect-ratio:1;overflow:hidden;display:block}
 .ig-grid img{width:100%;height:100%;object-fit:cover;transition:.6s}.ig-grid a:hover img{transform:scale(1.15)}
-.ig-grid a::after{content:"♥";position:absolute;inset:0;background:rgba(224,64,154,.55);color:#fff;font-size:2.4rem;display:flex;align-items:center;justify-content:center;opacity:0;transition:.4s}.ig-grid a:hover::after{opacity:1}
+.ig-grid a::after{content:"♥";position:absolute;inset:0;background:rgba(69,65,62,.62);color:#fff;font-size:2.4rem;display:flex;align-items:center;justify-content:center;opacity:0;transition:.4s}.ig-grid a:hover::after{opacity:1}
 .ig-grid .oculto{display:none}
 .centro{text-align:center;margin-top:28px}.centro .btn{margin:0 6px}
 /* NEWSLETTER */
@@ -156,7 +156,7 @@ footer{background:var(--blanco);color:#000000;padding:56px 0 22px;font-size:.88r
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1!important;transform:none!important}.slide.activo>*{opacity:1;transform:none;animation:none}.slide.activo{animation:none}}
 .contacto-caja input[type=checkbox]{width:auto;margin:0 8px 0 0;vertical-align:middle}#news form>p[role=status]{width:100%;margin-top:12px}
 
-.public-collection{scroll-margin-top:120px;margin-bottom:65px}.public-collection .cuadricula{grid-template-columns:repeat(3,minmax(0,1fr))}.public-collection .prenda img{width:100%;height:420px;object-fit:contain;background:#faf7f0}.collection-intro,.collection-cta{text-align:center;margin:22px auto;max-width:760px}.collection-cta .btn{display:block;width:fit-content;margin:20px auto;font-size:.75rem}.bp-page .collection-grid{grid-template-columns:repeat(3,minmax(0,1fr))}@media(max-width:700px){.public-collection .cuadricula,.bp-page .collection-grid{grid-template-columns:1fr}.public-collection .prenda img{height:380px}}
+.public-collection{scroll-margin-top:120px;margin-bottom:65px}.public-collection .cuadricula{grid-template-columns:repeat(3,minmax(0,1fr))}.public-collection .prenda img{width:100%;height:420px;object-fit:contain;background:#f5f2ee}.collection-intro,.collection-cta{text-align:center;margin:22px auto;max-width:760px}.collection-cta .btn{display:block;width:fit-content;margin:20px auto;font-size:.75rem}.bp-page .collection-grid{grid-template-columns:repeat(3,minmax(0,1fr))}@media(max-width:700px){.public-collection .cuadricula,.bp-page .collection-grid{grid-template-columns:1fr}.public-collection .prenda img{height:380px}}
 
 /* Small-screen safeguards shared by the newer public sections. */
 @media(max-width:700px){
@@ -175,3 +175,21 @@ footer{background:var(--blanco);color:#000000;padding:56px 0 22px;font-size:.88r
 :where(img[width][height]){height:auto}
 
 .seo-intro{max-width:850px;margin:20px auto;padding:0 24px;text-align:center}
+
+/* Warm stone and charcoal from the BEBEPUNT logo. */
+:root{--blanco:#fdfcfb;--paper:#fdfcfb;--stone:#e9e5e0;--ink:#45413e}
+body{background:var(--paper)}
+footer,.cabecera-int{background:#f2efeb;color:var(--ink)}
+#intro{padding:80px 24px 56px}
+#intro .LOGO{width:min(640px,100%);height:auto;margin:48px auto 40px}
+#intro p+p{margin-top:24px}
+#intro>.btn{margin-top:32px;max-width:100%;line-height:1.6}
+.slide .btn,.banner .btn{margin-top:18px}
+.centro{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:20px;margin-top:36px}
+.centro .btn{margin:0}
+#masIg:hover{background:var(--rosa)!important;color:#fff}
+.bp-page .hero-copy>.bp-btn{margin-top:28px}
+.bp-page .bp-actions{gap:20px}
+a:focus-visible,button:focus-visible{outline:3px solid var(--rosa);outline-offset:5px}
+#cabecera:not(.fijo) .b2b{background:var(--paper)}
+@media(max-width:600px){#intro .LOGO{margin:36px auto}#intro>.btn{padding:14px 22px}.centro{gap:16px}.centro .btn{width:100%;max-width:340px}}
