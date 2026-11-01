@@ -193,3 +193,6 @@ footer,.cabecera-int{background:#f2efeb;color:var(--ink)}
 a:focus-visible,button:focus-visible{outline:3px solid var(--rosa);outline-offset:5px}
 #cabecera:not(.fijo) .b2b{background:var(--paper)}
 @media(max-width:600px){#intro .LOGO{margin:36px auto}#intro>.btn{padding:14px 22px}.centro{gap:16px}.centro .btn{width:100%;max-width:340px}}
+
+/* White background for the company introduction, in both languages. */
+.cabecera-int.company-header{background:#fff}
