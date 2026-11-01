@@ -196,3 +196,6 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--rosa);outline-offse
 
 /* White background for the company introduction, in both languages. */
 .cabecera-int.company-header{background:#fff}
+
+.company-title-brand,.company-title-subtitle{display:block}
+.company-title-subtitle{margin-top:14px;font-size:clamp(1.1rem,2.5vw,1.65rem);line-height:1.5;letter-spacing:1px}
