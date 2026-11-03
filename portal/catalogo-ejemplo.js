@@ -7,11 +7,12 @@ window.BEBEPUNT_GET_DEMO_CATALOG = () => ({
       "name": tr("Otoño Invierno 26/27","Autumn Winter 26/27"),
       "season": tr("Calidez para sus primeros días","Warmth for their first days"),
       "slug": "otono",
-      "cover": "bebe2.jpg"
+      "cover": "otono-invierno-proximamente.webp",
+      "coming_soon": true
     },
     {
       "id": "demo-primavera",
-      "name": tr("Primavera Verano 2026","Spring Summer 2026"),
+      "name": tr("Verano 27","Summer 27"),
       "season": tr("Pequeñas aventuras al sol","Little adventures in the sunshine"),
       "slug": "primavera",
       "cover": "bebe1.jpg"
@@ -27,13 +28,13 @@ window.BEBEPUNT_GET_DEMO_CATALOG = () => ({
   "products": [
     {
       "id": "demo-modelo-01",
-      "collection_id": "demo-otono",
+      "collection_id": "demo-primavera",
       "collections": {
-        "id": "demo-otono",
-        "name": tr("Otoño Invierno 26/27","Autumn Winter 26/27"),
-        "season": tr("Calidez para sus primeros días","Warmth for their first days")
+        "id": "demo-primavera",
+        "name": tr("Verano 27","Summer 27"),
+        "season": tr("Pequeñas aventuras al sol","Little adventures in the sunshine")
       },
-      "name": tr("Conjunto Rosa Empolvado","Dusty Rose Set"),
+      "name": tr("Conjunto Trépoles color Rosa Palo","Trépoles Set in Dusty Pink"),
       "description": tr("Punto rosa y cuello blanco para un conjunto de aire delicado.","Pink knitwear and a white collar for a delicate look."),
       "demo_image": "bebe2.jpg",
       "is_demo": true,
@@ -90,13 +91,13 @@ window.BEBEPUNT_GET_DEMO_CATALOG = () => ({
     },
     {
       "id": "demo-modelo-02",
-      "collection_id": "demo-otono",
+      "collection_id": "demo-primavera",
       "collections": {
-        "id": "demo-otono",
-        "name": tr("Otoño Invierno 26/27","Autumn Winter 26/27"),
-        "season": tr("Calidez para sus primeros días","Warmth for their first days")
+        "id": "demo-primavera",
+        "name": tr("Verano 27","Summer 27"),
+        "season": tr("Pequeñas aventuras al sol","Little adventures in the sunshine")
       },
-      "name": tr("Vestido Canela","Cinnamon Dress"),
+      "name": tr("Vestido Nube color Nude","Nube Dress in Nude"),
       "description": tr("Un diseño de inspiración clásica en tonos cálidos.","A classically inspired design in warm shades."),
       "demo_image": "bebe4.jpg",
       "is_demo": true,
@@ -153,13 +154,13 @@ window.BEBEPUNT_GET_DEMO_CATALOG = () => ({
     },
     {
       "id": "demo-modelo-03",
-      "collection_id": "demo-otono",
+      "collection_id": "demo-primavera",
       "collections": {
-        "id": "demo-otono",
-        "name": tr("Otoño Invierno 26/27","Autumn Winter 26/27"),
-        "season": tr("Calidez para sus primeros días","Warmth for their first days")
+        "id": "demo-primavera",
+        "name": tr("Verano 27","Summer 27"),
+        "season": tr("Pequeñas aventuras al sol","Little adventures in the sunshine")
       },
-      "name": tr("Conjunto Cielo","Sky Set"),
+      "name": tr("Dos piezas Galga 12","Galga 12 Two-piece Set"),
       "description": tr("Una propuesta de punto azul para los primeros meses.","Blue knitwear for the first months."),
       "demo_image": "bebe8.jpg",
       "is_demo": true,
@@ -216,13 +217,13 @@ window.BEBEPUNT_GET_DEMO_CATALOG = () => ({
     },
     {
       "id": "demo-modelo-04",
-      "collection_id": "demo-otono",
+      "collection_id": "demo-primavera",
       "collections": {
-        "id": "demo-otono",
-        "name": tr("Otoño Invierno 26/27","Autumn Winter 26/27"),
-        "season": tr("Calidez para sus primeros días","Warmth for their first days")
+        "id": "demo-primavera",
+        "name": tr("Verano 27","Summer 27"),
+        "season": tr("Pequeñas aventuras al sol","Little adventures in the sunshine")
       },
-      "name": tr("Chaqueta Nube","Cloud Cardigan"),
+      "name": tr("Conjunto Jardín","Jardín Set"),
       "description": tr("Chaqueta clara combinada con una prenda inferior azul.","A light cardigan paired with blue bottoms."),
       "demo_image": "bebe12.jpg",
       "is_demo": true,
@@ -279,13 +280,13 @@ window.BEBEPUNT_GET_DEMO_CATALOG = () => ({
     },
     {
       "id": "demo-modelo-05",
-      "collection_id": "demo-otono",
+      "collection_id": "demo-primavera",
       "collections": {
-        "id": "demo-otono",
-        "name": tr("Otoño Invierno 26/27","Autumn Winter 26/27"),
-        "season": tr("Calidez para sus primeros días","Warmth for their first days")
+        "id": "demo-primavera",
+        "name": tr("Verano 27","Summer 27"),
+        "season": tr("Pequeñas aventuras al sol","Little adventures in the sunshine")
       },
-      "name": tr("Conjunto Dulce Descanso","Sweet Dreams Set"),
+      "name": tr("Dos piezas Faro color Lavanda","Faro Two-piece Set in Lavender"),
       "description": tr("Silueta cómoda en azul suave, con cuello en contraste.","A comfortable silhouette in soft blue with a contrasting collar."),
       "demo_image": "bebe14.jpg",
       "is_demo": true,
@@ -341,77 +342,14 @@ window.BEBEPUNT_GET_DEMO_CATALOG = () => ({
       ]
     },
     {
-      "id": "demo-modelo-06",
-      "collection_id": "demo-otono",
-      "collections": {
-        "id": "demo-otono",
-        "name": tr("Otoño Invierno 26/27","Autumn Winter 26/27"),
-        "season": tr("Calidez para sus primeros días","Warmth for their first days")
-      },
-      "name": tr("Dos Piezas Brisa","Breeze Two-Piece Set"),
-      "description": tr("Dos piezas en azul claro con detalles de punto.","A light blue two-piece set with knitted details."),
-      "demo_image": "bebe19.jpg",
-      "is_demo": true,
-      "is_active": true,
-      "is_orderable": false,
-      "made_to_order": true,
-      "lead_time": tr("Plazo orientativo: 4–6 semanas. Pendiente de validación.","Estimated lead time: 4–6 weeks. Subject to confirmation."),
-      "composition": tr("Ficha de muestra. La composición real debe confirmarse con el fabricante.","Sample specification. Confirm the actual composition with the manufacturer."),
-      "washing": tr("Ficha de muestra. Consultar la etiqueta real de la prenda antes de su lavado.","Sample specification. Check the garment's actual care label before washing."),
-      "measurements": tr("Medidas de ejemplo en centímetros, no tomadas de las prendas fotografiadas. Verificar con BEBEPUNT antes de publicar para venta.","Example measurements in centimetres, not taken from the photographed garments. Confirm with BEBEPUNT before listing for sale."),
-      "size_guide": [
-        {
-          "size": "3 M",
-          "measurements": tr("Ejemplo: contorno de pecho 44 cm · largo 28 cm","Example: chest circumference 44 cm · length 28 cm")
-        },
-        {
-          "size": "6 M",
-          "measurements": tr("Ejemplo: contorno de pecho 46 cm · largo 31 cm","Example: chest circumference 46 cm · length 31 cm")
-        },
-        {
-          "size": "12 M",
-          "measurements": tr("Ejemplo: contorno de pecho 48 cm · largo 34 cm","Example: chest circumference 48 cm · length 34 cm")
-        }
-      ],
-      "product_variants": [
-        {
-          "id": "demo-modelo-06-0",
-          "sku": "MUESTRA-06-1",
-          "size": "3 M",
-          "color": tr("Azul claro","Light blue"),
-          "professional_price": 35,
-          "stock": 0,
-          "is_active": true
-        },
-        {
-          "id": "demo-modelo-06-1",
-          "sku": "MUESTRA-06-2",
-          "size": "6 M",
-          "color": tr("Azul claro","Light blue"),
-          "professional_price": 35,
-          "stock": 0,
-          "is_active": true
-        },
-        {
-          "id": "demo-modelo-06-2",
-          "sku": "MUESTRA-06-3",
-          "size": "12 M",
-          "color": tr("Azul claro","Light blue"),
-          "professional_price": 35,
-          "stock": 0,
-          "is_active": true
-        }
-      ]
-    },
-    {
       "id": "demo-modelo-07",
       "collection_id": "demo-primavera",
       "collections": {
         "id": "demo-primavera",
-        "name": tr("Primavera Verano 2026","Spring Summer 2026"),
+        "name": tr("Verano 27","Summer 27"),
         "season": tr("Pequeñas aventuras al sol","Little adventures in the sunshine")
       },
-      "name": tr("Ranita Oliva","Olive Romper"),
+      "name": tr("Pelele Salvia color Verde Empolvado","Salvia Romper in Dusty Green"),
       "description": tr("Una propuesta bicolor para descubrir el mundo.","A two-tone design for discovering the world."),
       "demo_image": "bebe1.jpg",
       "is_demo": true,
@@ -471,10 +409,10 @@ window.BEBEPUNT_GET_DEMO_CATALOG = () => ({
       "collection_id": "demo-primavera",
       "collections": {
         "id": "demo-primavera",
-        "name": tr("Primavera Verano 2026","Spring Summer 2026"),
+        "name": tr("Verano 27","Summer 27"),
         "season": tr("Pequeñas aventuras al sol","Little adventures in the sunshine")
       },
-      "name": tr("Peto Fresa","Strawberry Dungarees"),
+      "name": tr("Vestido Lavanda","Lavanda Dress"),
       "description": tr("Tonos claros con detalles rojos llenos de alegría.","Light shades with cheerful red details."),
       "demo_image": "bebe3.jpg",
       "is_demo": true,
@@ -534,10 +472,10 @@ window.BEBEPUNT_GET_DEMO_CATALOG = () => ({
       "collection_id": "demo-primavera",
       "collections": {
         "id": "demo-primavera",
-        "name": tr("Primavera Verano 2026","Spring Summer 2026"),
+        "name": tr("Verano 27","Summer 27"),
         "season": tr("Pequeñas aventuras al sol","Little adventures in the sunshine")
       },
-      "name": tr("Conjunto Agua","Aqua Set"),
+      "name": tr("Peto Aguamarina","Aguamarina Dungarees"),
       "description": tr("Conjunto sin mangas en un fresco tono turquesa.","A sleeveless set in a fresh turquoise shade."),
       "demo_image": "bebe6.jpg",
       "is_demo": true,
@@ -597,10 +535,10 @@ window.BEBEPUNT_GET_DEMO_CATALOG = () => ({
       "collection_id": "demo-primavera",
       "collections": {
         "id": "demo-primavera",
-        "name": tr("Primavera Verano 2026","Spring Summer 2026"),
+        "name": tr("Verano 27","Summer 27"),
         "season": tr("Pequeñas aventuras al sol","Little adventures in the sunshine")
       },
-      "name": tr("Vestido Albaricoque","Apricot Dress"),
+      "name": tr("Vestido Brisa color Melocotón","Brisa Dress in Peach"),
       "description": tr("Contraste de punto coral y tejido claro.","Contrasting coral knitwear and light fabric."),
       "demo_image": "bebe9.png",
       "is_demo": true,
@@ -660,10 +598,10 @@ window.BEBEPUNT_GET_DEMO_CATALOG = () => ({
       "collection_id": "demo-primavera",
       "collections": {
         "id": "demo-primavera",
-        "name": tr("Primavera Verano 2026","Spring Summer 2026"),
+        "name": tr("Verano 27","Summer 27"),
         "season": tr("Pequeñas aventuras al sol","Little adventures in the sunshine")
       },
-      "name": tr("Vestido Pradera","Meadow Dress"),
+      "name": tr("Vestido Lunares","Lunares Dress"),
       "description": tr("Verde y blanco para una silueta de inspiración campestre.","Green and white for a countryside-inspired silhouette."),
       "demo_image": "bebe13.jpg",
       "is_demo": true,
@@ -723,10 +661,10 @@ window.BEBEPUNT_GET_DEMO_CATALOG = () => ({
       "collection_id": "demo-primavera",
       "collections": {
         "id": "demo-primavera",
-        "name": tr("Primavera Verano 2026","Spring Summer 2026"),
+        "name": tr("Verano 27","Summer 27"),
         "season": tr("Pequeñas aventuras al sol","Little adventures in the sunshine")
       },
-      "name": tr("Ranita Pétalo","Petal Romper"),
+      "name": tr("Pichi Trépoles","Trépoles Pinafore"),
       "description": tr("Una ranita rosa de líneas sencillas.","A pink romper with clean lines."),
       "demo_image": "bebe17.jpg",
       "is_demo": true,
