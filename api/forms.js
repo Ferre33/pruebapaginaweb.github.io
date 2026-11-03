@@ -1,5 +1,18 @@
-import {need,origin,body} from '../server/common.mjs';
-export default async function handler(req,res){try{if(!origin(req,res))return;const d=body(req);if(!['newsletter','contact','retailer'].includes(d.kind))throw Error('Formulario no válido.');if(typeof d.email!=='string'||d.email.length>254||!/^\S+@\S+\.\S+$/.test(d.email)||d.consent!==true)throw Error('Revisa tu correo y acepta la política de privacidad.');
-const v=await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({secret:need('TURNSTILE_SECRET_KEY'),response:d.token})});const verified=await v.json();if(!verified.success||verified.hostname!==new URL(need('SITE_URL')).hostname)throw Error('Completa la verificación de seguridad e inténtalo de nuevo.');
-let url,payload;if(d.kind==='newsletter'){url='https://api.brevo.com/v3/contacts/doubleOptinConfirmation';payload={email:d.email,includeListIds:[Number(need('BREVO_LIST_ID'))],templateId:Number(need('BREVO_DOI_TEMPLATE_ID')),redirectionUrl:need('SITE_URL')+'/newsletter-confirmada.html'};}else{const name=String(d.name||'').slice(0,160),message=String(d.message||'').slice(0,5000);if(!name||!message)throw Error('Completa tu nombre y mensaje.');url='https://api.brevo.com/v3/smtp/email';payload={sender:{name:'BEBEPUNT Web',email:need('MAIL_FROM')},to:[{email:need('CONTACT_EMAIL')}],replyTo:{email:d.email,name},subject:d.kind==='retailer'?'Solicitud de información de una tienda':'Nuevo mensaje desde BEBEPUNT',textContent:`Nombre: ${name}\nEmail: ${d.email}\n\n${message}`};}
-const r=await fetch(url,{method:'POST',headers:{'Content-Type':'application/json','api-key':need('BREVO_API_KEY')},body:JSON.stringify(payload)});if(!r.ok){console.error('Mail provider returned',r.status);throw Error('No se pudo enviar el formulario. Inténtalo de nuevo más tarde.');}res.json({ok:true,message:d.kind==='newsletter'?'Revisa tu correo para confirmar la suscripción.':'Mensaje enviado. Gracias por contactar con BEBEPUNT.'});}catch(e){res.status(400).json({error:e.message||'No se pudo enviar.'});}}
+import {need,origin,body,db,ok} from '../server/common.mjs';
+import {validateForm} from '../server/form-validation.mjs';
+export default async function handler(req,res){
+ let lang='es';
+ try{
+  if(!origin(req,res))return;
+  const input=body(req);lang=input.lang==='en'?'en':'es';
+  let row;try{row=validateForm(input);}catch{return res.status(400).json({error:lang==='en'?'Check the form fields and accept the privacy policy.':'Revisa los campos y acepta la política de privacidad.'});}
+  if(typeof input.token!=='string'||!input.token||input.token.length>2048)return res.status(400).json({error:lang==='en'?'Complete the security check.':'Completa la verificación de seguridad.'});
+  const result=await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify',{method:'POST',headers:{'Content-Type':'application/json'},signal:AbortSignal.timeout(10000),body:JSON.stringify({secret:need('TURNSTILE_SECRET_KEY'),response:input.token})});
+  const verified=await result.json();
+  if(!result.ok||!verified.success||verified.hostname!==new URL(need('SITE_URL')).hostname)return res.status(400).json({error:lang==='en'?'Please complete the security check again.':'Vuelve a completar la verificación de seguridad.'});
+  // Persist the submission and its delivery jobs in one database transaction.
+  // Brevo failures do not erase a message or turn it into a duplicate submission.
+  ok(await db().rpc('record_web_submission',{p_data:row}));
+  return res.status(202).json({ok:true,message:lang==='en'?(row.category==='newsletter'?'Subscription request recorded. You will receive an email to confirm it.':'Your message has been recorded. Thank you for contacting BEBEPUNT.'):(row.category==='newsletter'?'Solicitud de suscripción registrada. Recibirás un correo para confirmarla.':'Tu mensaje ha quedado registrado. Gracias por contactar con BEBEPUNT.')});
+ }catch(e){console.error('Form submission failed:',e.code||e.name||'error');return res.status(503).json({error:lang==='en'?'We could not register your request. Please try again later.':'No hemos podido registrar tu solicitud. Inténtalo de nuevo más tarde.'});}
+}
