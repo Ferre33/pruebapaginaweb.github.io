@@ -70,3 +70,12 @@ body:not(.commerce-admin) a[href="carrito.html"],body:not(.commerce-admin) a[hre
 .season-coming-soon h1,.season-coming-soon h2{font-size:clamp(2rem,6vw,4.25rem);line-height:1.2;margin:0;font-weight:500;color:#45413e}
 .season-coming-soon .season-date{font-size:clamp(1.2rem,3vw,2rem);margin:18px 0 0;color:#655f59}
 @media(max-width:540px){.season-coming-soon{padding:20px 12px}.season-coming-soon>div{padding:24px 12px}}
+
+/* Autumn launch artwork fills its card while keeping live, translated text. */
+.collection-preview-soon{display:grid;position:relative;height:290px;overflow:hidden;isolation:isolate}
+.collection-preview-soon>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:-2}
+.collection-preview-soon::before{content:"";position:absolute;inset:0;background:linear-gradient(transparent,rgba(253,252,251,.72) 35%,rgba(253,252,251,.72) 65%,transparent);z-index:-1}
+.collection-preview-caption{align-self:center;display:grid;gap:12px;padding:18px 10px;text-align:center;color:var(--ink)}
+.collection-preview-caption strong{font-size:clamp(1rem,2vw,1.5rem);font-weight:600;line-height:1.4}
+.collection-preview-caption>span{font-size:clamp(.8rem,1.5vw,1rem);line-height:1.4}
+@media(max-width:600px){.collection-preview-soon{height:190px}}
