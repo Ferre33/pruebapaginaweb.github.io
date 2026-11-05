@@ -44,21 +44,7 @@ window.BEBEPUNT_GET_DEMO_CATALOG = () => ({
       "lead_time": tr("Plazo orientativo: 4–6 semanas. Pendiente de validación.","Estimated lead time: 4–6 weeks. Subject to confirmation."),
       "composition": tr("Ficha de muestra. La composición real debe confirmarse con el fabricante.","Sample specification. Confirm the actual composition with the manufacturer."),
       "washing": tr("Ficha de muestra. Consultar la etiqueta real de la prenda antes de su lavado.","Sample specification. Check the garment's actual care label before washing."),
-      "measurements": tr("Medidas de ejemplo en centímetros, no tomadas de las prendas fotografiadas. Verificar con BEBEPUNT antes de publicar para venta.","Example measurements in centimetres, not taken from the photographed garments. Confirm with BEBEPUNT before listing for sale."),
-      "size_guide": [
-        {
-          "size": "3 M",
-          "measurements": tr("Ejemplo: contorno de pecho 44 cm · largo 28 cm","Example: chest circumference 44 cm · length 28 cm")
-        },
-        {
-          "size": "6 M",
-          "measurements": tr("Ejemplo: contorno de pecho 46 cm · largo 31 cm","Example: chest circumference 46 cm · length 31 cm")
-        },
-        {
-          "size": "12 M",
-          "measurements": tr("Ejemplo: contorno de pecho 48 cm · largo 34 cm","Example: chest circumference 48 cm · length 34 cm")
-        }
-      ],
+      "size_guide": [],
       "product_variants": [
         {
           "id": "demo-modelo-01-0",
@@ -107,21 +93,7 @@ window.BEBEPUNT_GET_DEMO_CATALOG = () => ({
       "lead_time": tr("Plazo orientativo: 4–6 semanas. Pendiente de validación.","Estimated lead time: 4–6 weeks. Subject to confirmation."),
       "composition": tr("Ficha de muestra. La composición real debe confirmarse con el fabricante.","Sample specification. Confirm the actual composition with the manufacturer."),
       "washing": tr("Ficha de muestra. Consultar la etiqueta real de la prenda antes de su lavado.","Sample specification. Check the garment's actual care label before washing."),
-      "measurements": tr("Medidas de ejemplo en centímetros, no tomadas de las prendas fotografiadas. Verificar con BEBEPUNT antes de publicar para venta.","Example measurements in centimetres, not taken from the photographed garments. Confirm with BEBEPUNT before listing for sale."),
-      "size_guide": [
-        {
-          "size": "3 M",
-          "measurements": tr("Ejemplo: contorno de pecho 44 cm · largo 28 cm","Example: chest circumference 44 cm · length 28 cm")
-        },
-        {
-          "size": "6 M",
-          "measurements": tr("Ejemplo: contorno de pecho 46 cm · largo 31 cm","Example: chest circumference 46 cm · length 31 cm")
-        },
-        {
-          "size": "12 M",
-          "measurements": tr("Ejemplo: contorno de pecho 48 cm · largo 34 cm","Example: chest circumference 48 cm · length 34 cm")
-        }
-      ],
+      "size_guide": [],
       "product_variants": [
         {
           "id": "demo-modelo-02-0",
@@ -170,21 +142,7 @@ window.BEBEPUNT_GET_DEMO_CATALOG = () => ({
       "lead_time": tr("Plazo orientativo: 4–6 semanas. Pendiente de validación.","Estimated lead time: 4–6 weeks. Subject to confirmation."),
       "composition": tr("Ficha de muestra. La composición real debe confirmarse con el fabricante.","Sample specification. Confirm the actual composition with the manufacturer."),
       "washing": tr("Ficha de muestra. Consultar la etiqueta real de la prenda antes de su lavado.","Sample specification. Check the garment's actual care label before washing."),
-      "measurements": tr("Medidas de ejemplo en centímetros, no tomadas de las prendas fotografiadas. Verificar con BEBEPUNT antes de publicar para venta.","Example measurements in centimetres, not taken from the photographed garments. Confirm with BEBEPUNT before listing for sale."),
-      "size_guide": [
-        {
-          "size": "3 M",
-          "measurements": tr("Ejemplo: contorno de pecho 44 cm · largo 28 cm","Example: chest circumference 44 cm · length 28 cm")
-        },
-        {
-          "size": "6 M",
-          "measurements": tr("Ejemplo: contorno de pecho 46 cm · largo 31 cm","Example: chest circumference 46 cm · length 31 cm")
-        },
-        {
-          "size": "12 M",
-          "measurements": tr("Ejemplo: contorno de pecho 48 cm · largo 34 cm","Example: chest circumference 48 cm · length 34 cm")
-        }
-      ],
+      "size_guide": [],
       "product_variants": [
         {
           "id": "demo-modelo-03-0",
@@ -233,21 +191,7 @@ window.BEBEPUNT_GET_DEMO_CATALOG = () => ({
       "lead_time": tr("Plazo orientativo: 4–6 semanas. Pendiente de validación.","Estimated lead time: 4–6 weeks. Subject to confirmation."),
       "composition": tr("Ficha de muestra. La composición real debe confirmarse con el fabricante.","Sample specification. Confirm the actual composition with the manufacturer."),
       "washing": tr("Ficha de muestra. Consultar la etiqueta real de la prenda antes de su lavado.","Sample specification. Check the garment's actual care label before washing."),
-      "measurements": tr("Medidas de ejemplo en centímetros, no tomadas de las prendas fotografiadas. Verificar con BEBEPUNT antes de publicar para venta.","Example measurements in centimetres, not taken from the photographed garments. Confirm with BEBEPUNT before listing for sale."),
-      "size_guide": [
-        {
-          "size": "3 M",
-          "measurements": tr("Ejemplo: contorno de pecho 44 cm · largo 28 cm","Example: chest circumference 44 cm · length 28 cm")
-        },
-        {
-          "size": "6 M",
-          "measurements": tr("Ejemplo: contorno de pecho 46 cm · largo 31 cm","Example: chest circumference 46 cm · length 31 cm")
-        },
-        {
-          "size": "12 M",
-          "measurements": tr("Ejemplo: contorno de pecho 48 cm · largo 34 cm","Example: chest circumference 48 cm · length 34 cm")
-        }
-      ],
+      "size_guide": [],
       "product_variants": [
         {
           "id": "demo-modelo-04-0",
@@ -296,21 +240,7 @@ window.BEBEPUNT_GET_DEMO_CATALOG = () => ({
       "lead_time": tr("Plazo orientativo: 4–6 semanas. Pendiente de validación.","Estimated lead time: 4–6 weeks. Subject to confirmation."),
       "composition": tr("Ficha de muestra. La composición real debe confirmarse con el fabricante.","Sample specification. Confirm the actual composition with the manufacturer."),
       "washing": tr("Ficha de muestra. Consultar la etiqueta real de la prenda antes de su lavado.","Sample specification. Check the garment's actual care label before washing."),
-      "measurements": tr("Medidas de ejemplo en centímetros, no tomadas de las prendas fotografiadas. Verificar con BEBEPUNT antes de publicar para venta.","Example measurements in centimetres, not taken from the photographed garments. Confirm with BEBEPUNT before listing for sale."),
-      "size_guide": [
-        {
-          "size": "3 M",
-          "measurements": tr("Ejemplo: contorno de pecho 44 cm · largo 28 cm","Example: chest circumference 44 cm · length 28 cm")
-        },
-        {
-          "size": "6 M",
-          "measurements": tr("Ejemplo: contorno de pecho 46 cm · largo 31 cm","Example: chest circumference 46 cm · length 31 cm")
-        },
-        {
-          "size": "12 M",
-          "measurements": tr("Ejemplo: contorno de pecho 48 cm · largo 34 cm","Example: chest circumference 48 cm · length 34 cm")
-        }
-      ],
+      "size_guide": [],
       "product_variants": [
         {
           "id": "demo-modelo-05-0",
@@ -359,21 +289,7 @@ window.BEBEPUNT_GET_DEMO_CATALOG = () => ({
       "lead_time": tr("Plazo orientativo: 4–6 semanas. Pendiente de validación.","Estimated lead time: 4–6 weeks. Subject to confirmation."),
       "composition": tr("Ficha de muestra. La composición real debe confirmarse con el fabricante.","Sample specification. Confirm the actual composition with the manufacturer."),
       "washing": tr("Ficha de muestra. Consultar la etiqueta real de la prenda antes de su lavado.","Sample specification. Check the garment's actual care label before washing."),
-      "measurements": tr("Medidas de ejemplo en centímetros, no tomadas de las prendas fotografiadas. Verificar con BEBEPUNT antes de publicar para venta.","Example measurements in centimetres, not taken from the photographed garments. Confirm with BEBEPUNT before listing for sale."),
-      "size_guide": [
-        {
-          "size": "3 M",
-          "measurements": tr("Ejemplo: contorno de pecho 44 cm · largo 28 cm","Example: chest circumference 44 cm · length 28 cm")
-        },
-        {
-          "size": "6 M",
-          "measurements": tr("Ejemplo: contorno de pecho 46 cm · largo 31 cm","Example: chest circumference 46 cm · length 31 cm")
-        },
-        {
-          "size": "12 M",
-          "measurements": tr("Ejemplo: contorno de pecho 48 cm · largo 34 cm","Example: chest circumference 48 cm · length 34 cm")
-        }
-      ],
+      "size_guide": [],
       "product_variants": [
         {
           "id": "demo-modelo-07-0",
@@ -422,21 +338,7 @@ window.BEBEPUNT_GET_DEMO_CATALOG = () => ({
       "lead_time": tr("Plazo orientativo: 4–6 semanas. Pendiente de validación.","Estimated lead time: 4–6 weeks. Subject to confirmation."),
       "composition": tr("Ficha de muestra. La composición real debe confirmarse con el fabricante.","Sample specification. Confirm the actual composition with the manufacturer."),
       "washing": tr("Ficha de muestra. Consultar la etiqueta real de la prenda antes de su lavado.","Sample specification. Check the garment's actual care label before washing."),
-      "measurements": tr("Medidas de ejemplo en centímetros, no tomadas de las prendas fotografiadas. Verificar con BEBEPUNT antes de publicar para venta.","Example measurements in centimetres, not taken from the photographed garments. Confirm with BEBEPUNT before listing for sale."),
-      "size_guide": [
-        {
-          "size": "3 M",
-          "measurements": tr("Ejemplo: contorno de pecho 44 cm · largo 28 cm","Example: chest circumference 44 cm · length 28 cm")
-        },
-        {
-          "size": "6 M",
-          "measurements": tr("Ejemplo: contorno de pecho 46 cm · largo 31 cm","Example: chest circumference 46 cm · length 31 cm")
-        },
-        {
-          "size": "12 M",
-          "measurements": tr("Ejemplo: contorno de pecho 48 cm · largo 34 cm","Example: chest circumference 48 cm · length 34 cm")
-        }
-      ],
+      "size_guide": [],
       "product_variants": [
         {
           "id": "demo-modelo-08-0",
@@ -485,21 +387,7 @@ window.BEBEPUNT_GET_DEMO_CATALOG = () => ({
       "lead_time": tr("Plazo orientativo: 4–6 semanas. Pendiente de validación.","Estimated lead time: 4–6 weeks. Subject to confirmation."),
       "composition": tr("Ficha de muestra. La composición real debe confirmarse con el fabricante.","Sample specification. Confirm the actual composition with the manufacturer."),
       "washing": tr("Ficha de muestra. Consultar la etiqueta real de la prenda antes de su lavado.","Sample specification. Check the garment's actual care label before washing."),
-      "measurements": tr("Medidas de ejemplo en centímetros, no tomadas de las prendas fotografiadas. Verificar con BEBEPUNT antes de publicar para venta.","Example measurements in centimetres, not taken from the photographed garments. Confirm with BEBEPUNT before listing for sale."),
-      "size_guide": [
-        {
-          "size": "3 M",
-          "measurements": tr("Ejemplo: contorno de pecho 44 cm · largo 28 cm","Example: chest circumference 44 cm · length 28 cm")
-        },
-        {
-          "size": "6 M",
-          "measurements": tr("Ejemplo: contorno de pecho 46 cm · largo 31 cm","Example: chest circumference 46 cm · length 31 cm")
-        },
-        {
-          "size": "12 M",
-          "measurements": tr("Ejemplo: contorno de pecho 48 cm · largo 34 cm","Example: chest circumference 48 cm · length 34 cm")
-        }
-      ],
+      "size_guide": [],
       "product_variants": [
         {
           "id": "demo-modelo-09-0",
@@ -548,21 +436,7 @@ window.BEBEPUNT_GET_DEMO_CATALOG = () => ({
       "lead_time": tr("Plazo orientativo: 4–6 semanas. Pendiente de validación.","Estimated lead time: 4–6 weeks. Subject to confirmation."),
       "composition": tr("Ficha de muestra. La composición real debe confirmarse con el fabricante.","Sample specification. Confirm the actual composition with the manufacturer."),
       "washing": tr("Ficha de muestra. Consultar la etiqueta real de la prenda antes de su lavado.","Sample specification. Check the garment's actual care label before washing."),
-      "measurements": tr("Medidas de ejemplo en centímetros, no tomadas de las prendas fotografiadas. Verificar con BEBEPUNT antes de publicar para venta.","Example measurements in centimetres, not taken from the photographed garments. Confirm with BEBEPUNT before listing for sale."),
-      "size_guide": [
-        {
-          "size": "3 M",
-          "measurements": tr("Ejemplo: contorno de pecho 44 cm · largo 28 cm","Example: chest circumference 44 cm · length 28 cm")
-        },
-        {
-          "size": "6 M",
-          "measurements": tr("Ejemplo: contorno de pecho 46 cm · largo 31 cm","Example: chest circumference 46 cm · length 31 cm")
-        },
-        {
-          "size": "12 M",
-          "measurements": tr("Ejemplo: contorno de pecho 48 cm · largo 34 cm","Example: chest circumference 48 cm · length 34 cm")
-        }
-      ],
+      "size_guide": [],
       "product_variants": [
         {
           "id": "demo-modelo-10-0",
@@ -611,21 +485,7 @@ window.BEBEPUNT_GET_DEMO_CATALOG = () => ({
       "lead_time": tr("Plazo orientativo: 4–6 semanas. Pendiente de validación.","Estimated lead time: 4–6 weeks. Subject to confirmation."),
       "composition": tr("Ficha de muestra. La composición real debe confirmarse con el fabricante.","Sample specification. Confirm the actual composition with the manufacturer."),
       "washing": tr("Ficha de muestra. Consultar la etiqueta real de la prenda antes de su lavado.","Sample specification. Check the garment's actual care label before washing."),
-      "measurements": tr("Medidas de ejemplo en centímetros, no tomadas de las prendas fotografiadas. Verificar con BEBEPUNT antes de publicar para venta.","Example measurements in centimetres, not taken from the photographed garments. Confirm with BEBEPUNT before listing for sale."),
-      "size_guide": [
-        {
-          "size": "3 M",
-          "measurements": tr("Ejemplo: contorno de pecho 44 cm · largo 28 cm","Example: chest circumference 44 cm · length 28 cm")
-        },
-        {
-          "size": "6 M",
-          "measurements": tr("Ejemplo: contorno de pecho 46 cm · largo 31 cm","Example: chest circumference 46 cm · length 31 cm")
-        },
-        {
-          "size": "12 M",
-          "measurements": tr("Ejemplo: contorno de pecho 48 cm · largo 34 cm","Example: chest circumference 48 cm · length 34 cm")
-        }
-      ],
+      "size_guide": [],
       "product_variants": [
         {
           "id": "demo-modelo-11-0",
@@ -674,21 +534,7 @@ window.BEBEPUNT_GET_DEMO_CATALOG = () => ({
       "lead_time": tr("Plazo orientativo: 4–6 semanas. Pendiente de validación.","Estimated lead time: 4–6 weeks. Subject to confirmation."),
       "composition": tr("Ficha de muestra. La composición real debe confirmarse con el fabricante.","Sample specification. Confirm the actual composition with the manufacturer."),
       "washing": tr("Ficha de muestra. Consultar la etiqueta real de la prenda antes de su lavado.","Sample specification. Check the garment's actual care label before washing."),
-      "measurements": tr("Medidas de ejemplo en centímetros, no tomadas de las prendas fotografiadas. Verificar con BEBEPUNT antes de publicar para venta.","Example measurements in centimetres, not taken from the photographed garments. Confirm with BEBEPUNT before listing for sale."),
-      "size_guide": [
-        {
-          "size": "3 M",
-          "measurements": tr("Ejemplo: contorno de pecho 44 cm · largo 28 cm","Example: chest circumference 44 cm · length 28 cm")
-        },
-        {
-          "size": "6 M",
-          "measurements": tr("Ejemplo: contorno de pecho 46 cm · largo 31 cm","Example: chest circumference 46 cm · length 31 cm")
-        },
-        {
-          "size": "12 M",
-          "measurements": tr("Ejemplo: contorno de pecho 48 cm · largo 34 cm","Example: chest circumference 48 cm · length 34 cm")
-        }
-      ],
+      "size_guide": [],
       "product_variants": [
         {
           "id": "demo-modelo-12-0",
@@ -737,21 +583,7 @@ window.BEBEPUNT_GET_DEMO_CATALOG = () => ({
       "lead_time": tr("Plazo orientativo: 4–6 semanas. Pendiente de validación.","Estimated lead time: 4–6 weeks. Subject to confirmation."),
       "composition": tr("Ficha de muestra. La composición real debe confirmarse con el fabricante.","Sample specification. Confirm the actual composition with the manufacturer."),
       "washing": tr("Ficha de muestra. Consultar la etiqueta real de la prenda antes de su lavado.","Sample specification. Check the garment's actual care label before washing."),
-      "measurements": tr("Medidas de ejemplo en centímetros, no tomadas de las prendas fotografiadas. Verificar con BEBEPUNT antes de publicar para venta.","Example measurements in centimetres, not taken from the photographed garments. Confirm with BEBEPUNT before listing for sale."),
-      "size_guide": [
-        {
-          "size": "3 M",
-          "measurements": tr("Ejemplo: contorno de pecho 44 cm · largo 28 cm","Example: chest circumference 44 cm · length 28 cm")
-        },
-        {
-          "size": "6 M",
-          "measurements": tr("Ejemplo: contorno de pecho 46 cm · largo 31 cm","Example: chest circumference 46 cm · length 31 cm")
-        },
-        {
-          "size": "12 M",
-          "measurements": tr("Ejemplo: contorno de pecho 48 cm · largo 34 cm","Example: chest circumference 48 cm · length 34 cm")
-        }
-      ],
+      "size_guide": [],
       "product_variants": [
         {
           "id": "demo-modelo-13-0",
@@ -800,21 +632,7 @@ window.BEBEPUNT_GET_DEMO_CATALOG = () => ({
       "lead_time": tr("Plazo orientativo: 4–6 semanas. Pendiente de validación.","Estimated lead time: 4–6 weeks. Subject to confirmation."),
       "composition": tr("Ficha de muestra. La composición real debe confirmarse con el fabricante.","Sample specification. Confirm the actual composition with the manufacturer."),
       "washing": tr("Ficha de muestra. Consultar la etiqueta real de la prenda antes de su lavado.","Sample specification. Check the garment's actual care label before washing."),
-      "measurements": tr("Medidas de ejemplo en centímetros, no tomadas de las prendas fotografiadas. Verificar con BEBEPUNT antes de publicar para venta.","Example measurements in centimetres, not taken from the photographed garments. Confirm with BEBEPUNT before listing for sale."),
-      "size_guide": [
-        {
-          "size": "3 M",
-          "measurements": tr("Ejemplo: contorno de pecho 44 cm · largo 28 cm","Example: chest circumference 44 cm · length 28 cm")
-        },
-        {
-          "size": "6 M",
-          "measurements": tr("Ejemplo: contorno de pecho 46 cm · largo 31 cm","Example: chest circumference 46 cm · length 31 cm")
-        },
-        {
-          "size": "12 M",
-          "measurements": tr("Ejemplo: contorno de pecho 48 cm · largo 34 cm","Example: chest circumference 48 cm · length 34 cm")
-        }
-      ],
+      "size_guide": [],
       "product_variants": [
         {
           "id": "demo-modelo-14-0",
@@ -863,21 +681,7 @@ window.BEBEPUNT_GET_DEMO_CATALOG = () => ({
       "lead_time": tr("Plazo orientativo: 4–6 semanas. Pendiente de validación.","Estimated lead time: 4–6 weeks. Subject to confirmation."),
       "composition": tr("Ficha de muestra. La composición real debe confirmarse con el fabricante.","Sample specification. Confirm the actual composition with the manufacturer."),
       "washing": tr("Ficha de muestra. Consultar la etiqueta real de la prenda antes de su lavado.","Sample specification. Check the garment's actual care label before washing."),
-      "measurements": tr("Medidas de ejemplo en centímetros, no tomadas de las prendas fotografiadas. Verificar con BEBEPUNT antes de publicar para venta.","Example measurements in centimetres, not taken from the photographed garments. Confirm with BEBEPUNT before listing for sale."),
-      "size_guide": [
-        {
-          "size": "3 M",
-          "measurements": tr("Ejemplo: contorno de pecho 44 cm · largo 28 cm","Example: chest circumference 44 cm · length 28 cm")
-        },
-        {
-          "size": "6 M",
-          "measurements": tr("Ejemplo: contorno de pecho 46 cm · largo 31 cm","Example: chest circumference 46 cm · length 31 cm")
-        },
-        {
-          "size": "12 M",
-          "measurements": tr("Ejemplo: contorno de pecho 48 cm · largo 34 cm","Example: chest circumference 48 cm · length 34 cm")
-        }
-      ],
+      "size_guide": [],
       "product_variants": [
         {
           "id": "demo-modelo-15-0",
@@ -926,21 +730,7 @@ window.BEBEPUNT_GET_DEMO_CATALOG = () => ({
       "lead_time": tr("Plazo orientativo: 4–6 semanas. Pendiente de validación.","Estimated lead time: 4–6 weeks. Subject to confirmation."),
       "composition": tr("Ficha de muestra. La composición real debe confirmarse con el fabricante.","Sample specification. Confirm the actual composition with the manufacturer."),
       "washing": tr("Ficha de muestra. Consultar la etiqueta real de la prenda antes de su lavado.","Sample specification. Check the garment's actual care label before washing."),
-      "measurements": tr("Medidas de ejemplo en centímetros, no tomadas de las prendas fotografiadas. Verificar con BEBEPUNT antes de publicar para venta.","Example measurements in centimetres, not taken from the photographed garments. Confirm with BEBEPUNT before listing for sale."),
-      "size_guide": [
-        {
-          "size": "3 M",
-          "measurements": tr("Ejemplo: contorno de pecho 44 cm · largo 28 cm","Example: chest circumference 44 cm · length 28 cm")
-        },
-        {
-          "size": "6 M",
-          "measurements": tr("Ejemplo: contorno de pecho 46 cm · largo 31 cm","Example: chest circumference 46 cm · length 31 cm")
-        },
-        {
-          "size": "12 M",
-          "measurements": tr("Ejemplo: contorno de pecho 48 cm · largo 34 cm","Example: chest circumference 48 cm · length 34 cm")
-        }
-      ],
+      "size_guide": [],
       "product_variants": [
         {
           "id": "demo-modelo-16-0",
@@ -989,21 +779,7 @@ window.BEBEPUNT_GET_DEMO_CATALOG = () => ({
       "lead_time": tr("Plazo orientativo: 4–6 semanas. Pendiente de validación.","Estimated lead time: 4–6 weeks. Subject to confirmation."),
       "composition": tr("Ficha de muestra. La composición real debe confirmarse con el fabricante.","Sample specification. Confirm the actual composition with the manufacturer."),
       "washing": tr("Ficha de muestra. Consultar la etiqueta real de la prenda antes de su lavado.","Sample specification. Check the garment's actual care label before washing."),
-      "measurements": tr("Medidas de ejemplo en centímetros, no tomadas de las prendas fotografiadas. Verificar con BEBEPUNT antes de publicar para venta.","Example measurements in centimetres, not taken from the photographed garments. Confirm with BEBEPUNT before listing for sale."),
-      "size_guide": [
-        {
-          "size": "3 M",
-          "measurements": tr("Ejemplo: contorno de pecho 44 cm · largo 28 cm","Example: chest circumference 44 cm · length 28 cm")
-        },
-        {
-          "size": "6 M",
-          "measurements": tr("Ejemplo: contorno de pecho 46 cm · largo 31 cm","Example: chest circumference 46 cm · length 31 cm")
-        },
-        {
-          "size": "12 M",
-          "measurements": tr("Ejemplo: contorno de pecho 48 cm · largo 34 cm","Example: chest circumference 48 cm · length 34 cm")
-        }
-      ],
+      "size_guide": [],
       "product_variants": [
         {
           "id": "demo-modelo-17-0",
@@ -1052,21 +828,7 @@ window.BEBEPUNT_GET_DEMO_CATALOG = () => ({
       "lead_time": tr("Plazo orientativo: 4–6 semanas. Pendiente de validación.","Estimated lead time: 4–6 weeks. Subject to confirmation."),
       "composition": tr("Ficha de muestra. La composición real debe confirmarse con el fabricante.","Sample specification. Confirm the actual composition with the manufacturer."),
       "washing": tr("Ficha de muestra. Consultar la etiqueta real de la prenda antes de su lavado.","Sample specification. Check the garment's actual care label before washing."),
-      "measurements": tr("Medidas de ejemplo en centímetros, no tomadas de las prendas fotografiadas. Verificar con BEBEPUNT antes de publicar para venta.","Example measurements in centimetres, not taken from the photographed garments. Confirm with BEBEPUNT before listing for sale."),
-      "size_guide": [
-        {
-          "size": tr("2 A","2 Y"),
-          "measurements": tr("Ejemplo: contorno de pecho 56 cm · largo 44 cm","Example: chest circumference 56 cm · length 44 cm")
-        },
-        {
-          "size": tr("3 A","3 Y"),
-          "measurements": tr("Ejemplo: contorno de pecho 58 cm · largo 47 cm","Example: chest circumference 58 cm · length 47 cm")
-        },
-        {
-          "size": tr("4 A","4 Y"),
-          "measurements": tr("Ejemplo: contorno de pecho 60 cm · largo 50 cm","Example: chest circumference 60 cm · length 50 cm")
-        }
-      ],
+      "size_guide": [],
       "product_variants": [
         {
           "id": "demo-modelo-18-0",
@@ -1115,21 +877,7 @@ window.BEBEPUNT_GET_DEMO_CATALOG = () => ({
       "lead_time": tr("Plazo orientativo: 4–6 semanas. Pendiente de validación.","Estimated lead time: 4–6 weeks. Subject to confirmation."),
       "composition": tr("Ficha de muestra. La composición real debe confirmarse con el fabricante.","Sample specification. Confirm the actual composition with the manufacturer."),
       "washing": tr("Ficha de muestra. Consultar la etiqueta real de la prenda antes de su lavado.","Sample specification. Check the garment's actual care label before washing."),
-      "measurements": tr("Medidas de ejemplo en centímetros, no tomadas de las prendas fotografiadas. Verificar con BEBEPUNT antes de publicar para venta.","Example measurements in centimetres, not taken from the photographed garments. Confirm with BEBEPUNT before listing for sale."),
-      "size_guide": [
-        {
-          "size": tr("2 A","2 Y"),
-          "measurements": tr("Ejemplo: contorno de pecho 56 cm · largo 44 cm","Example: chest circumference 56 cm · length 44 cm")
-        },
-        {
-          "size": tr("3 A","3 Y"),
-          "measurements": tr("Ejemplo: contorno de pecho 58 cm · largo 47 cm","Example: chest circumference 58 cm · length 47 cm")
-        },
-        {
-          "size": tr("4 A","4 Y"),
-          "measurements": tr("Ejemplo: contorno de pecho 60 cm · largo 50 cm","Example: chest circumference 60 cm · length 50 cm")
-        }
-      ],
+      "size_guide": [],
       "product_variants": [
         {
           "id": "demo-modelo-19-0",
@@ -1178,21 +926,7 @@ window.BEBEPUNT_GET_DEMO_CATALOG = () => ({
       "lead_time": tr("Plazo orientativo: 4–6 semanas. Pendiente de validación.","Estimated lead time: 4–6 weeks. Subject to confirmation."),
       "composition": tr("Ficha de muestra. La composición real debe confirmarse con el fabricante.","Sample specification. Confirm the actual composition with the manufacturer."),
       "washing": tr("Ficha de muestra. Consultar la etiqueta real de la prenda antes de su lavado.","Sample specification. Check the garment's actual care label before washing."),
-      "measurements": tr("Medidas de ejemplo en centímetros, no tomadas de las prendas fotografiadas. Verificar con BEBEPUNT antes de publicar para venta.","Example measurements in centimetres, not taken from the photographed garments. Confirm with BEBEPUNT before listing for sale."),
-      "size_guide": [
-        {
-          "size": tr("2 A","2 Y"),
-          "measurements": tr("Ejemplo: contorno de pecho 56 cm · largo 44 cm","Example: chest circumference 56 cm · length 44 cm")
-        },
-        {
-          "size": tr("3 A","3 Y"),
-          "measurements": tr("Ejemplo: contorno de pecho 58 cm · largo 47 cm","Example: chest circumference 58 cm · length 47 cm")
-        },
-        {
-          "size": tr("4 A","4 Y"),
-          "measurements": tr("Ejemplo: contorno de pecho 60 cm · largo 50 cm","Example: chest circumference 60 cm · length 50 cm")
-        }
-      ],
+      "size_guide": [],
       "product_variants": [
         {
           "id": "demo-modelo-20-0",
@@ -1241,21 +975,7 @@ window.BEBEPUNT_GET_DEMO_CATALOG = () => ({
       "lead_time": tr("Plazo orientativo: 4–6 semanas. Pendiente de validación.","Estimated lead time: 4–6 weeks. Subject to confirmation."),
       "composition": tr("Ficha de muestra. La composición real debe confirmarse con el fabricante.","Sample specification. Confirm the actual composition with the manufacturer."),
       "washing": tr("Ficha de muestra. Consultar la etiqueta real de la prenda antes de su lavado.","Sample specification. Check the garment's actual care label before washing."),
-      "measurements": tr("Medidas de ejemplo en centímetros, no tomadas de las prendas fotografiadas. Verificar con BEBEPUNT antes de publicar para venta.","Example measurements in centimetres, not taken from the photographed garments. Confirm with BEBEPUNT before listing for sale."),
-      "size_guide": [
-        {
-          "size": "3 M",
-          "measurements": tr("Ejemplo: contorno de pecho 44 cm · largo 28 cm","Example: chest circumference 44 cm · length 28 cm")
-        },
-        {
-          "size": "6 M",
-          "measurements": tr("Ejemplo: contorno de pecho 46 cm · largo 31 cm","Example: chest circumference 46 cm · length 31 cm")
-        },
-        {
-          "size": "12 M",
-          "measurements": tr("Ejemplo: contorno de pecho 48 cm · largo 34 cm","Example: chest circumference 48 cm · length 34 cm")
-        }
-      ],
+      "size_guide": [],
       "product_variants": [
         {
           "id": "demo-modelo-21-0",
@@ -1304,21 +1024,7 @@ window.BEBEPUNT_GET_DEMO_CATALOG = () => ({
       "lead_time": tr("Plazo orientativo: 4–6 semanas. Pendiente de validación.","Estimated lead time: 4–6 weeks. Subject to confirmation."),
       "composition": tr("Ficha de muestra. La composición real debe confirmarse con el fabricante.","Sample specification. Confirm the actual composition with the manufacturer."),
       "washing": tr("Ficha de muestra. Consultar la etiqueta real de la prenda antes de su lavado.","Sample specification. Check the garment's actual care label before washing."),
-      "measurements": tr("Medidas de ejemplo en centímetros, no tomadas de las prendas fotografiadas. Verificar con BEBEPUNT antes de publicar para venta.","Example measurements in centimetres, not taken from the photographed garments. Confirm with BEBEPUNT before listing for sale."),
-      "size_guide": [
-        {
-          "size": tr("2 A","2 Y"),
-          "measurements": tr("Ejemplo: contorno de pecho 56 cm · largo 44 cm","Example: chest circumference 56 cm · length 44 cm")
-        },
-        {
-          "size": tr("3 A","3 Y"),
-          "measurements": tr("Ejemplo: contorno de pecho 58 cm · largo 47 cm","Example: chest circumference 58 cm · length 47 cm")
-        },
-        {
-          "size": tr("4 A","4 Y"),
-          "measurements": tr("Ejemplo: contorno de pecho 60 cm · largo 50 cm","Example: chest circumference 60 cm · length 50 cm")
-        }
-      ],
+      "size_guide": [],
       "product_variants": [
         {
           "id": "demo-modelo-22-0",

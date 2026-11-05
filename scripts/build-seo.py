@@ -69,7 +69,7 @@ def optimize_assets(doc,path):
     head=doc.find('head')
     if path=='index.html':
         for el in head.xpath('./link[@id="hero-preload"]'):head.remove(el)
-        etree.SubElement(head,'link',id='hero-preload',rel='preload',href=manifest.get('/img/bebe21.png',{}).get('src','/img/bebe21.png'),**{'as':'image','type':'image/webp','fetchpriority':'high'})
+        etree.SubElement(head,'link',id='hero-preload',rel='preload',href=manifest.get('/img/ceremonia5.jpg',{}).get('src','/img/ceremonia5.jpg'),**{'as':'image','type':'image/webp','fetchpriority':'high'})
 
 def portable_paths(doc, output_path):
     """Keep resources and navigation within the site when hosted in a subdirectory."""
