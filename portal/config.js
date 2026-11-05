@@ -6,7 +6,7 @@ window.BEBEPUNT_SUPABASE_ANON_KEY = 'sb_publishable_GrFFg3Hm9zDAWyQQj7btaA_fcqI0
 
 window.BEBEPUNT_API_BASE = '';
 window.BEBEPUNT_PRIVACY_URL = new URL('../politica-privacidad-bebepunt/privacidad/index.html', document.currentScript.src).href;
-window.BEBEPUNT_PRIVACY_VERSION = '2026-10-22';
+window.BEBEPUNT_PRIVACY_VERSION = '2026-11-05';
 window.BEBEPUNT_TERMS_URL = '';
 
 // Display illustrative collections alongside real Supabase products.

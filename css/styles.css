@@ -207,3 +207,5 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--rosa);outline-offse
 .season-coming-soon h1,.season-coming-soon h2{font-size:clamp(2rem,6vw,4.25rem);line-height:1.2;margin:0;font-weight:500;color:#45413e}
 .season-coming-soon .season-date{font-size:clamp(1.2rem,3vw,2rem);margin:18px 0 0;color:#655f59}
 @media(max-width:540px){.season-coming-soon{padding:20px 12px}.season-coming-soon>div{padding:24px 12px}}
+
+.slide .collection-coming{font-size:clamp(1.2rem,3vw,2rem);margin:0 0 20px;letter-spacing:.08em}
