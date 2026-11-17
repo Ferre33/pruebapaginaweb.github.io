@@ -7,7 +7,7 @@ export function validateForm(input){
  const row={request_id:input.request_id,category:input.kind,email,language:input.lang==='en'?'en':'es',privacy_version:'2026-11-05'};
  for(const [key,max] of Object.entries(limits)){const value=input[key]??'';if(typeof value!=='string'||value.length>max)throw Error('invalid');row[key]=value.trim();}
  if(row.category!=='newsletter'&&(!row.name||!row.message))throw Error('invalid');
- if(row.category==='retailer'&&!row.shop_name)throw Error('invalid');
+ if(row.category==='retailer'&&(!row.shop_name||!row.phone||!row.city))throw Error('invalid');
  if(row.category==='newsletter')for(const key of Object.keys(limits))row[key]='';
  return row;
 }
