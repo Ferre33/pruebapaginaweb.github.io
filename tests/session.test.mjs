@@ -26,3 +26,4 @@ test('administrator catalogue retains prices',async()=>{const r=await start({pag
 test('administrator product retains prices and basket form',async()=>{const r=await start({page:'producto',role:'admin'});const html=r.nodes.get('#content').innerHTML;assert.match(html,/id="add"/);assert.match(html,/€/);});
 
 for(const lang of ['es','en'])test('autumn collection shows launch date without catalogue in '+lang,async()=>{const r=await start({page:'catalogo',collection:'demo-otono',lang});const html=r.nodes.get('#content').innerHTML;assert.match(html,lang==='en'?/Coming soon/:/Próximamente/);assert.match(html,lang==='en'?/January 2027/:/Enero 2027/);assert.equal(r.calls.filter(c=>c[0]==='products').length,0);});
+test('ordinary shop cannot access administrator statistics',async()=>{const r=await start({page:'estadisticas'});assert.deepEqual(r.redirects,['inicio.html']);assert(!r.calls.some(c=>c[0]==='website_events'));});
