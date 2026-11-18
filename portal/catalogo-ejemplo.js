@@ -581,7 +581,7 @@ window.BEBEPUNT_GET_DEMO_CATALOG = () => ({
       "is_orderable": true,
       "made_to_order": true,
       "lead_time": tr("Plazo orientativo: 4–6 semanas. Pendiente de validación.","Estimated lead time: 4–6 weeks. Subject to confirmation."),
-      "composition": tr("Ficha de muestra. La composición real debe confirmarse con el fabricante.","Sample specification. Confirm the actual composition with the manufacturer."),
+      "composition": tr("100 % poliéster","100% polyester"),
       "washing": tr("Ficha de muestra. Consultar la etiqueta real de la prenda antes de su lavado.","Sample specification. Check the garment's actual care label before washing."),
       "size_guide": [],
       "product_variants": [
@@ -630,7 +630,7 @@ window.BEBEPUNT_GET_DEMO_CATALOG = () => ({
       "is_orderable": true,
       "made_to_order": true,
       "lead_time": tr("Plazo orientativo: 4–6 semanas. Pendiente de validación.","Estimated lead time: 4–6 weeks. Subject to confirmation."),
-      "composition": tr("Ficha de muestra. La composición real debe confirmarse con el fabricante.","Sample specification. Confirm the actual composition with the manufacturer."),
+      "composition": tr("90 % poliéster · 10 % algodón","90% polyester · 10% cotton"),
       "washing": tr("Ficha de muestra. Consultar la etiqueta real de la prenda antes de su lavado.","Sample specification. Check the garment's actual care label before washing."),
       "size_guide": [],
       "product_variants": [
@@ -669,11 +669,11 @@ window.BEBEPUNT_GET_DEMO_CATALOG = () => ({
       [21, '27.102', 'Jesusito + braguita punto Alma', 'Alma baby dress and knitted bloomers', 'ceremonia9.jpg', 'M', 'Crudo', 'Ecru', '100 % algodón', '100% cotton', 49],
       [16, '27.401', 'Pelele canesú Alma', 'Alma yoke romper', 'ceremonia4.jpg', 'M', 'Crudo', 'Ecru', 'Punto: 100 % algodón', 'Knit: 100% cotton', 40],
       [23, '27.402', 'Pelele Alma', 'Alma romper', 'ceremonia-27-402.jpg', 'M', 'Piedra', 'Stone', '100 % algodón', '100% cotton', null],
-      [22, '27.907', 'Camisa y peto Alma', 'Alma shirt and dungarees', 'ceremonia10.jpg', 'M', 'Único', 'Single colour', '', '', 53],
-      [15, '27.712', 'Blusa y pantalón Aura', 'Aura blouse and trousers', 'ceremonia3.jpg', 'A', 'Único', 'Single colour', '', '', 48],
-      [18, '27.904', 'Vestido niña Aura', "Aura girls’ dress", 'ceremonia6.jpg', 'A', 'Único', 'Single colour', '', '', 58],
-      [19, '27.908', 'Camisa y bombacho Alma', 'Alma shirt and bloomer shorts', 'ceremonia7.jpg', 'A', 'Único', 'Single colour', '', '', 54],
-      [20, '27.909', 'Vestido Alma', 'Alma dress', 'ceremonia8.jpg', 'A', 'Único', 'Single colour', '', '', 57]
+      [22, '27.907', 'Camisa y peto Alma', 'Alma shirt and dungarees', 'ceremonia10.jpg', 'M', 'Único', 'Single colour', '100 % poliéster · 100 % algodón', '100% polyester · 100% cotton', 53],
+      [15, '27.712', 'Blusa y pantalón Aura', 'Aura blouse and trousers', 'ceremonia3.jpg', 'A', 'Único', 'Single colour', '90 % poliéster · 10 % algodón', '90% polyester · 10% cotton', 48],
+      [18, '27.904', 'Vestido niña Aura', "Aura girls’ dress", 'ceremonia6.jpg', 'A', 'Único', 'Single colour', '90 % poliéster · 10 % algodón', '90% polyester · 10% cotton', 58],
+      [19, '27.908', 'Camisa y bombacho Alma', 'Alma shirt and bloomer shorts', 'ceremonia7.jpg', 'A', 'Único', 'Single colour', '100 % poliéster · 100 % algodón', '100% polyester · 100% cotton', 54],
+      [20, '27.909', 'Vestido Alma', 'Alma dress', 'ceremonia8.jpg', 'A', 'Único', 'Single colour', '100 % algodón', '100% cotton', 57]
     ].map(([n,reference,es,en,demo_image,unit,colour,colourEn,material,materialEn,price])=>{
       const id='demo-modelo-'+n, sizes=unit==='M'?[0,1,3,6,9,12,18,24,36]:[2,3,4,5,6];
       return {id,reference,name:tr(es,en),demo_image,collection_id:'demo-ceremonia',
