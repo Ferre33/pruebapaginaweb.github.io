@@ -1,4 +1,5 @@
-export const formOrigins = ['https://pruebapaginawebgithubio.vercel.app', 'https://ferre33.github.io'];
+import {siteOrigins} from './site-origins.mjs';
+export const formOrigins = Object.freeze([...siteOrigins, 'https://ferre33.github.io']);
 export function formOrigin(req,res){
  res.setHeader('Cache-Control','no-store');res.setHeader('Vary','Origin');
  if(!formOrigins.includes(req.headers.origin)){res.status(403).json({error:'Origen no permitido.'});return false;}
