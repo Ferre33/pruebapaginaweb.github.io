@@ -52,6 +52,6 @@ for p in [root/q for q in pages]+list((root/'en').rglob('*.html')):
    assert (root/urljoin('/'+str(p.relative_to(root)),candidate.strip().split()[0]).lstrip('/')).exists()
 assert html.parse(str(root/'index.html')).xpath('//meta[@name="google-site-verification"]')
 home=html.parse(str(root/'index.html'))
-assert home.xpath('string(//title)')=='BEBEPUNT COOP. V. - Ropa de bebé en Ayora'
+assert home.xpath('string(//title)')=='BEBEPUNT COOP. V. - Ropa de bebé para tiendas y almacenes'
 assert 'z_Y7TXx0eyC7eQEiXsnPd7C9jQsH6Eit5PE9rXYGEyo' in home.xpath('//meta[@name="google-site-verification"]/@content')
 print('PASS: optimized images decode, responsive sources exist, verification tag present.')

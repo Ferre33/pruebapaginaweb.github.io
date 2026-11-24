@@ -1,6 +1,6 @@
 # SEO público BEBEPUNT
 
-El dominio canónico es **https://bebepunt.com/**. Las seis páginas públicas tienen versiones españolas e inglesas estáticas en `/en/`, canonical propio y hreflang recíproco. El título español de la portada es **BEBEPUNT COOP. V. - Ropa de bebé en Ayora**; la versión inglesa tiene su traducción.
+El dominio canónico es **https://bebepunt.com/**. Las seis páginas públicas tienen versiones españolas e inglesas estáticas en `/en/`, canonical propio y hreflang recíproco. El título español de la portada es **BEBEPUNT COOP. V. - Ropa de bebé para tiendas y almacenes**; la versión inglesa tiene su traducción.
 
 ## Estructura y contenido
 
