@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://pruebapaginawebgithubio.vercel.app/sitemap.xml
+Sitemap: https://bebepunt.com/sitemap.xml

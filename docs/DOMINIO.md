@@ -1,53 +1,41 @@
-# Conexión de bebepunt.com
+# Dominio de producción BEBEPUNT
 
-Estado revisado el 21 de noviembre de 2026. Esta preparación no significa que el dominio esté sirviendo ya la web.
+Activado el 24 de noviembre de 2026: **https://bebepunt.com**. La versión con `www` redirige a la raíz mediante HTTP 308 y conserva la ruta.
 
-## Preparado
+## DNS y certificado
 
-- Vercel tiene asociados `bebepunt.com` y `www.bebepunt.com` al proyecto de esta web.
-- `www.bebepunt.com` redirige a `bebepunt.com` con código 308.
-- La barra de comentarios de Vercel en producción está desactivada.
-- El servidor acepta los formularios y las llamadas autenticadas de comercio desde ambos nombres nuevos y mantiene el alias de producción durante la transición.
-- Los formularios siguen comprobando que el token Turnstile pertenece al mismo hostname que realiza el envío. No se permiten comodines de origen.
+La zona sigue en el proveedor original, con servidores `ns1.incuatroagr.com` y `ns2.incuatroagr.com`. En cPanel se cambiaron únicamente los dos registros web:
 
-## Pendiente antes del cambio de DNS
+| Nombre | Tipo | Valor actual | TTL |
+| --- | --- | --- | --- |
+| `bebepunt.com` | A | `216.198.79.1` | 300 |
+| `www.bebepunt.com` | CNAME | `771297d3914d96f3.vercel-dns-017.com.` | 300 |
 
-1. En Supabase, Authentication → URL Configuration, añadir estas direcciones exactas a Redirect URLs sin borrar las existentes:
-   - `https://bebepunt.com/portal/index.html`
-   - `https://bebepunt.com/portal/recuperar.html`
-   - `https://www.bebepunt.com/portal/index.html`
-   - `https://www.bebepunt.com/portal/recuperar.html`
-2. Revisar las plantillas de confirmación y recuperación. Deben respetar el destino solicitado por la aplicación; no sustituir el enlace de confirmación completo por un enlace ordinario sin token.
-3. En Cloudflare → Turnstile, editar el widget ya usado por la web y añadir `bebepunt.com` en Hostname Management. Este nombre cubre también `www`. Mantener los hostnames anteriores y la clave del widget existente.
-4. Obtener acceso al panel DNS actual o coordinar el cambio con su administrador. El usuario y la contraseña FTP no sustituyen el acceso a ese panel.
+Son destinos recomendados por Vercel para este proyecto. Vercel confirmó ambos dominios como correctamente configurados. Se emitió un certificado para los dos nombres con renovación automática. Las páginas de inicio, inglés, acceso al portal y recuperación responden por HTTPS desde Vercel.
 
-El Site URL predeterminado de Supabase y los enlaces de correo se cambian después de comprobar DNS y HTTPS, para no enviar a los usuarios a una web todavía desconectada.
+Se conservan los registros de correo, FTP, cPanel, verificaciones y los de otros dominios. El MX de `bebepunt.com` apunta a `mail.bebepunt.com`, que mantiene su registro A en `204.93.189.118`. El acceso de administración del alojamiento sigue disponible en `https://cpanel.bebepunt.com:2083/`.
 
-## DNS observado y destino
+Antes del cambio, el A raíz era `204.93.189.118` y el CNAME de `www` era `bebepunt.com`; ambos tenían TTL 14400. Por ello, algunas redes pueden seguir usando el alojamiento anterior durante hasta cuatro horas desde el cambio. No es necesario cambiar los servidores de nombres.
 
-La comprobación de Vercel del 21/11/2026 muestra DNS externos: `ns1.incuatroagr.com` y `ns2.incuatroagr.com`. El dominio raíz resuelve a `204.93.189.118` y `www` es un CNAME a `bebepunt.com`. Ambos aparecen como configuración incorrecta para Vercel.
+## Configuración de la aplicación
 
-Vercel devuelve estas recomendaciones para este proyecto; comprobarlas de nuevo justo antes de editar la zona:
+- Vercel: `SITE_URL=https://bebepunt.com` en producción. Requiere un despliegue posterior para aplicarse.
+- Supabase Auth: Site URL `https://bebepunt.com/portal/index.html`.
+- Redirect URLs de Supabase: conservar las rutas exactas `portal/index.html` y `portal/recuperar.html` de `bebepunt.com`, `www.bebepunt.com`, el alias de Vercel y GitHub Pages mientras dure la transición.
+- Correos de solicitudes: `bebepunt_private.application_mail_settings.review_url=https://bebepunt.com/portal/admin.html`.
+- Correos de formularios: `bebepunt_private.web_form_settings.site_url=https://bebepunt.com`.
+- SEO: el origen predeterminado de `scripts/build-seo.py`, las URL canónicas, hreflang, datos estructurados, sitemap y robots utilizan `https://bebepunt.com`.
+- La copia de GitHub Pages utiliza `https://bebepunt.com` como base de API; la web principal usa rutas relativas.
+- Cloudflare Turnstile: el usuario confirmó el 23/11/2026 que añadió `bebepunt.com` al widget existente, conservando los dominios anteriores. No se rotaron las claves. La comprobación del servidor sigue exigiendo que el hostname del token coincida con el origen del formulario.
+- Se mantiene el alias `pruebapaginawebgithubio.vercel.app` durante la transición. La barra de comentarios de Vercel en producción está desactivada.
 
-| Nombre | Tipo | Destinos recomendados de prioridad 1 |
-| --- | --- | --- |
-| `@` | A | `216.198.79.1`, `64.29.17.1` |
-| `www` | CNAME | `771297d3914d96f3.vercel-dns-017.com.` |
+## Comprobaciones y mantenimiento
 
-Guardar una copia de la zona antes del cambio. Sustituir los registros web incompatibles, sin mezclar la antigua IP con las nuevas. Revisar posibles AAAA del mismo nombre. Conservar los servidores de nombres y los registros de correo y verificación. Si el MX o el host de correo dependen de la IP del dominio raíz, separar su destino de correo antes de cambiar el A de la web.
+Las pruebas de aplicación, SEO y rutas portables deben pasar antes de publicar. Revisar el diff del generador SEO para conservar traducciones y ajustes manuales existentes. Las páginas privadas permanecen excluidas de indexación.
 
-## Cambio final, tras comprobar HTTPS
+La verificación de HTTPS y de los ajustes de correo no sustituye una prueba completa de recepción de mensajes. Para probar contacto, suscripción, solicitud de tienda, confirmación y recuperación, usar una cuenta de prueba autorizada; no duplicar contactos ni solicitudes reales.
 
-- Confirmar que ambos dominios tienen configuración válida y certificado, y que `www` redirige a la raíz conservando la ruta.
-- Establecer `SITE_URL=https://bebepunt.com` en el entorno de producción de Vercel y desplegar de nuevo.
-- En Supabase Auth, establecer Site URL en `https://bebepunt.com/portal/index.html`; mantener las redirecciones exactas anteriores durante la transición.
-- Actualizar únicamente las URL de `bebepunt_private.application_mail_settings.review_url` a `https://bebepunt.com/portal/admin.html` y `bebepunt_private.web_form_settings.site_url` a `https://bebepunt.com`. Conservar destinatarios, remitentes, listas y plantillas.
-- Cambiar el origen SEO predeterminado de `scripts/build-seo.py`, regenerar con `SITE_ORIGIN=https://bebepunt.com` y revisar el diff de las páginas, sitemap y robots antes de publicar. Ejecutar `scripts/check-seo.py` y `scripts/check-portable-paths.py`.
-- Actualizar la base de API de la copia en GitHub Pages a `https://bebepunt.com` cuando ese destino esté validado. Las páginas servidas por Vercel ya usan rutas relativas.
-- Comprobar desde el dominio propio: navegación ES/EN, imágenes, contacto, solicitud de tiendas, suscripción, confirmación de correo, recuperación y acceso de cliente/administrador.
-- Comprobar la recepción de los envíos de prueba en la base de datos y su procesamiento por la cola de correo, sin duplicar contactos.
-
-Si todavía falla DNS, conservar las URL actuales de correo, SEO y configuración principal. No desactivar el alias de Vercel hasta finalizar la transición y decidir una redirección compatible con las llamadas a la API.
+Si se cambia de proveedor en el futuro, consultar los valores DNS específicos de ese proyecto y mantener el correo separado del registro A de la web. No retirar el alias anterior hasta comprobar los enlaces antiguos y las integraciones.
 
 ## Referencias
 
