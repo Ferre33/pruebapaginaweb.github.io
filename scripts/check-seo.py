@@ -13,8 +13,19 @@ for page in pages:
     assert len(doc.xpath('//link[@hreflang]'))==3,file
     assert len(doc.xpath('//meta[@name="description"]'))==1,file
     assert len(doc.xpath('//title'))==1,file
+    title=pages[page][0 if lang=='es' else 1]
+    assert doc.xpath('string(//title)')==title,file
+    assert doc.xpath('//meta[@property="og:title"]/@content')==[title],file
+    assert doc.xpath('//meta[@name="twitter:title"]/@content')==[title],file
     assert not doc.xpath('//h1[not(normalize-space())]|//h2[not(normalize-space())]'),file
     for s in doc.xpath('//script[@type="application/ld+json"]/text()'):json.loads(s)
+    graph=json.loads(doc.xpath('string(//script[@id="seo-schema"])'))['@graph']
+    org=next(x for x in graph if x['@type']=='Organization')
+    assert org['legalName']=='BEBEPUNT COOP. V.' and org['address']['addressLocality']=='Ayora',file
+    assert org['address']['postalCode']=='46620' and org['telephone']=='+34961890616',file
+    assert len([x for x in graph if x['@type']=='WebSite'])==1,file
+    webpage=next(x for x in graph if x['@id']==url+'#webpage')
+    assert webpage['url']==url and webpage['name']==title and webpage['inLanguage']==lang,file
     for e in doc.xpath('//*[@href or @src]'):
         v=e.get('src') or e.get('href');path=unquote(urlsplit(v).path)
         if not urlsplit(v).netloc and path.startswith('/') and not path.startswith('//'):
@@ -40,4 +51,7 @@ for p in [root/q for q in pages]+list((root/'en').rglob('*.html')):
   for candidate in img.get('srcset').split(','):
    assert (root/urljoin('/'+str(p.relative_to(root)),candidate.strip().split()[0]).lstrip('/')).exists()
 assert html.parse(str(root/'index.html')).xpath('//meta[@name="google-site-verification"]')
+home=html.parse(str(root/'index.html'))
+assert home.xpath('string(//title)')=='BEBEPUNT COOP. V. - Ropa de bebé en Ayora'
+assert 'z_Y7TXx0eyC7eQEiXsnPd7C9jQsH6Eit5PE9rXYGEyo' in home.xpath('//meta[@name="google-site-verification"]/@content')
 print('PASS: optimized images decode, responsive sources exist, verification tag present.')
