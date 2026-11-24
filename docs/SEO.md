@@ -9,6 +9,7 @@ El dominio canónico es **https://bebepunt.com/**. Las seis páginas públicas t
 - Los datos estructurados conectan Organization, WebSite y cada página. Incluyen la denominación BEBEPUNT COOP. V., dirección, teléfono y correo públicos. No se atribuye a BEBEPUNT la ficha de Google Maps de otra empresa que comparte dirección.
 - No publicar precios privados, clientes, productos de demostración, reseñas inventadas, horarios sin confirmar ni disponibilidad que no sea real. El área cliente conserva `noindex`.
 - Mantener textos útiles y traducciones completas; evitar repeticiones artificiales de palabras clave. Las imágenes públicas conservan sus modelos y tienen versiones WebP y textos alternativos cuando aportan información.
+- El favicon muestra los tres niños originales dentro de un círculo neutro, con exterior transparente. Se publica en `/img/favicon-bebepunt.png` (192 × 192), `/favicon.ico` (16, 32 y 48) y `/img/apple-touch-icon.png` (180 × 180). El formato del archivo es cuadrado aunque la figura sea circular. Estas URL estables deben permanecer accesibles al rastreador de imágenes. Para reconstruir los iconos desde `img/niños-bebepunt.png`, ejecutar `python scripts/build-icons.py`.
 
 ## Cómo editar y comprobar
 

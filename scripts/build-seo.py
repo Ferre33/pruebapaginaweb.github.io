@@ -135,6 +135,11 @@ def build():
         paths(doc,path,lang)
         optimize_assets(doc,path)
         head=doc.find('head');canonical=ORIGIN+route(path,lang); title=data[0 if lang=='es' else 1];desc=data[2 if lang=='es' else 3]
+        # Stable square icons are shared by both languages and remain crawlable.
+        for e in head.xpath('./link[@rel="icon" or @rel="shortcut icon" or @rel="apple-touch-icon"]'):head.remove(e)
+        etree.SubElement(head,'link',rel='icon',href='/favicon.ico',sizes='16x16 32x32 48x48',type='image/x-icon')
+        etree.SubElement(head,'link',rel='icon',href='/img/favicon-bebepunt.png',sizes='192x192',type='image/png')
+        etree.SubElement(head,'link',rel='apple-touch-icon',href='/img/apple-touch-icon.png',sizes='180x180')
         for e in head.xpath('./title|./meta[@name="description" or starts-with(@property,"og:") or starts-with(@name,"twitter:")]|./link[@rel="canonical" or @hreflang]|./script[@id="seo-schema"]|./noscript[@id="seo-noscript"]'):head.remove(e)
         etree.SubElement(head,'title').text=title
         def meta(**a):etree.SubElement(head,'meta',**a)

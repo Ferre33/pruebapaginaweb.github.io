@@ -14,7 +14,7 @@ def head(t,d,p,sub):
 <!-- TIPOGRAFÍA: Comfortaa (Google Fonts) para TODA la web -->
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
-<link rel="icon" href="{sub}img/LOGO_BEBEPUNT.jpeg"><link rel="stylesheet" href="{sub}css/styles.css">
+<link rel="icon" type="image/png" sizes="192x192" href="{sub}img/favicon-bebepunt.png"><link rel="stylesheet" href="{sub}css/styles.css">
 </head><body{' class="interior"' if sub else ''}>
 <!-- ========== CABECERA / MENÚ (logo, menú, selector idioma ES/EN, acceso B2B, redes) ========== -->
 <header id="cabecera">
