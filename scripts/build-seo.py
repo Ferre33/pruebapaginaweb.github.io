@@ -8,7 +8,7 @@ from PIL import Image
 from urllib.parse import urljoin, urlsplit
 import os, json, re, copy, posixpath
 ROOT=Path(__file__).resolve().parents[1]
-ORIGIN=os.environ.get('SITE_ORIGIN','https://pruebapaginawebgithubio.vercel.app').rstrip('/')
+ORIGIN=os.environ.get('SITE_ORIGIN','https://bebepunt.com').rstrip('/')
 PAGES={
 'index.html': ('Ropa de bebé para tiendas · Fabricada en España | BEBEPUNT','Baby clothing for retailers · Made in Spain | BEBEPUNT','Moda de bebé fabricada en España. Descubre las colecciones BEBEPUNT, la colección de ceremonia y la información para tiendas y distribuidores.','Baby clothing made in Spain. Explore BEBEPUNT collections, occasion wear and information for retailers and distributors.','Ropa de bebé fabricada en España para tiendas','Baby clothing made in Spain for retailers'),
 'about/index.html':('BEBEPUNT · Fabricación de ropa de bebé en Ayora','BEBEPUNT · Baby clothing made in Ayora, Spain','Conoce la historia familiar de BEBEPUNT desde 1967 y nuestra fabricación de ropa de bebé en Ayora, Valencia.','Discover BEBEPUNT’s family history since 1967 and our baby clothing manufacturing in Ayora, Valencia, Spain.','BEBEPUNT: Nuestra historia y fabricación en Ayora','BEBEPUNT: Our history and manufacturing in Ayora'),
