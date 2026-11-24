@@ -1,21 +1,34 @@
 # SEO público BEBEPUNT
 
-Las seis páginas públicas tienen una versión española y una inglesa estática en `/en/`, con canonical propio y hreflang recíproco. El origen canónico actual es https://pruebapaginawebgithubio.vercel.app.
+El dominio canónico es **https://bebepunt.com/**. Las seis páginas públicas tienen versiones españolas e inglesas estáticas en `/en/`, canonical propio y hreflang recíproco. El título español de la portada es **BEBEPUNT COOP. V. - Ropa de bebé en Ayora**; la versión inglesa tiene su traducción.
 
-## Cómo editar
+## Estructura y contenido
 
-Editar las páginas españolas y sus atributos `data-es` y `data-en`. Los títulos y descripciones se mantienen en `scripts/build-seo.py`. Ejecutar `python scripts/optimize-images.py` y `python scripts/build-seo.py` (dependencias: lxml y Pillow), `python scripts/check-seo.py` y `npm test` antes de publicar. No editar a mano las páginas generadas de `/en/`.
+- Mantener un H1 por página, H2 para secciones y H3 para subsecciones. El tamaño visual se controla con CSS, no cambiando arbitrariamente el nivel de encabezado.
+- Los títulos y descripciones describen fabricación en Ayora, colecciones y distribución al por mayor. La página de ubicaciones describe la sede actual, sin anunciar una red de tiendas que aún no figura en el mapa.
+- Los datos estructurados conectan Organization, WebSite y cada página. Incluyen la denominación BEBEPUNT COOP. V., dirección, teléfono y correo públicos. No se atribuye a BEBEPUNT la ficha de Google Maps de otra empresa que comparte dirección.
+- No publicar precios privados, clientes, productos de demostración, reseñas inventadas, horarios sin confirmar ni disponibilidad que no sea real. El área cliente conserva `noindex`.
+- Mantener textos útiles y traducciones completas; evitar repeticiones artificiales de palabras clave. Las imágenes públicas conservan sus modelos y tienen versiones WebP y textos alternativos cuando aportan información.
 
-Mantener un H1 descriptivo por página, H2 para secciones y H3 para subsecciones. Elegir el nivel por la estructura, no por el tamaño de letra. Escribir textos útiles sobre fabricación, colecciones y distribución, sin repetir palabras clave artificialmente. Las etiquetas de campaña no son encabezados.
+## Cómo editar y comprobar
 
-## Prioridades fuera del código
+Editar las páginas españolas y sus atributos `data-es`, `data-en`, `data-alt-es` y `data-alt-en`. Los títulos y descripciones están en `scripts/build-seo.py`. No editar a mano las páginas generadas de `/en/`.
 
-1. Propiedad verificada en Google Search Console y `/sitemap.xml` enviado el 28 de octubre de 2026. Google muestra estado Correcto y 12 páginas descubiertas. Esto no significa que estén indexadas. Revisar indexación, consultas reales, clics y problemas móviles cuando Google disponga de datos. Mantener la etiqueta google-site-verification publicada en la portada.
-2. Al disponer de dominio definitivo, cambiar `SITE_ORIGIN` al ejecutar el generador y redirigir permanentemente todas las URL anteriores a su equivalente. Conservar rutas ES/EN. No cambiar solo el canonical mientras el sitio nuevo no esté publicado.
-3. Completar información comercial auténtica: materiales, procesos, tallas y condiciones para tiendas. Publicar solo datos contrastados, sin exponer precios ni fichas privadas. Añadir contenido de colecciones cuando realmente cambien.
-4. Medir Core Web Vitals y optimizar las fotografías grandes en formatos modernos. Las páginas públicas sirven versiones WebP, variantes de 640 px para fotografías y precarga de la primera imagen de portada. Los originales se conservan. La mejora de bytes no equivale a una puntuación de Core Web Vitals; medirla con datos de laboratorio y tráfico real.
-5. Conseguir menciones y enlaces reales desde tiendas y entidades del sector. No comprar enlaces ni generar reseñas falsas. No hay garantías de primeras posiciones.
+Después de editar, ejecutar:
 
-El área cliente conserva noindex. No se publican precios, datos de clientes ni productos de demostración como datos estructurados de venta. No se han contratado servicios ni enviado formularios de prueba a clientes.
+```sh
+python scripts/build-seo.py
+python scripts/check-seo.py
+python scripts/check-portable-paths.py
+npm test
+```
 
-La configuración pendiente de formularios/Brevo sigue separada en PR #6; esta modificación SEO no la activa. Al integrar esa PR, conservar los atributos SEO y regenerar `/en/` para incorporar cualquier cambio en las páginas españolas.
+Las comprobaciones verifican títulos, datos estructurados, canonical, idiomas, enlaces, imágenes, sitemap y exclusión de páginas privadas. Comprobar también las páginas desplegadas; superar estos controles no equivale a una puntuación de Core Web Vitals.
+
+## Dominio e indexación
+
+`sitemap.xml` enumera las 12 URL públicas canónicas y `robots.txt` lo anuncia. Las URL públicas de `pruebapaginawebgithubio.vercel.app` redirigen con HTTP 301 a su equivalente en `bebepunt.com`. Las rutas `/api` y `/portal` del origen anterior se mantienen para conservar integraciones, sesiones y enlaces de autenticación existentes. Los alias de despliegues de prueba no se redirigen con estas reglas.
+
+Conservar las etiquetas `google-site-verification` de la portada: la propiedad antigua y la nueva tienen tokens distintos. En Google Search Console usar la propiedad **https://bebepunt.com/**, verificarla mediante la etiqueta HTML y enviar **https://bebepunt.com/sitemap.xml**. Tras publicar y comprobar las redirecciones, tramitar el cambio de dirección desde la propiedad antigua y solicitar la indexación de la portada. Un sitemap aceptado o una solicitud enviada no confirman que las páginas estén ya indexadas.
+
+Google decide qué título mostrar y la posición de cada resultado. Revisar consultas, impresiones, clics, indexación y experiencia móvil cuando haya datos. Mantener la información de colecciones al día y obtener menciones auténticas de tiendas y entidades del sector; no comprar enlaces ni reseñas. No se garantizan primeras posiciones.

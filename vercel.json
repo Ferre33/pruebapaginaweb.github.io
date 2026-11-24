@@ -30,6 +30,50 @@
   ],
   "redirects": [
     {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "pruebapaginawebgithubio.vercel.app"
+        }
+      ],
+      "destination": "https://bebepunt.com/",
+      "statusCode": 301
+    },
+    {
+      "source": "/index.html",
+      "has": [
+        {
+          "type": "host",
+          "value": "pruebapaginawebgithubio.vercel.app"
+        }
+      ],
+      "destination": "https://bebepunt.com/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "pruebapaginawebgithubio.vercel.app"
+        }
+      ],
+      "destination": "https://bebepunt.com/en/:path*",
+      "statusCode": 301
+    },
+    {
+      "source": "/:section(about|colecciones|contacto|para-tiendas|puntos-de-venta)/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "pruebapaginawebgithubio.vercel.app"
+        }
+      ],
+      "destination": "https://bebepunt.com/:section/:path*",
+      "statusCode": 301
+    },
+    {
       "source": "/portal",
       "destination": "/portal/index.html",
       "permanent": false
