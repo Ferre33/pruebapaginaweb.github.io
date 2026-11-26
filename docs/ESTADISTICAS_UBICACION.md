@@ -20,6 +20,7 @@ Solo los administradores aprobados según el modelo existente pueden leer el pan
 - `npm test`: coordenadas reducidas, precisión insuficiente, directorio y homónimos, consentimiento, firmas, caducidad, rechazo de campos personales, origen, DNT/GPC, errores de red y aislamiento de previews.
 - `python scripts/check-seo.py` y `python scripts/check-portable-paths.py`.
 - Prueba SQL con rollback: primer envío incrementa una vez, reintento no suma; acceso anónimo/cliente no autorizado rechazado; tabla agregada sin coordenadas o identificadores.
-- Revisión visual del aviso en móvil y escritorio, rechazo, selección manual ES/EN y consulta administrativa.
+- Navegador de escritorio en preview: aviso con aceptar/rechazar, reapertura desde el pie, búsqueda de Ayora, selección manual ES/EN y confirmación sin escritura real. Enlace a la sección 14 de privacidad verificado en inglés.
+- CSS con ancho limitado al viewport, desplazamiento vertical y botones apilados hasta 600 px. No se ha probado en un dispositivo móvil físico ni se ha concedido ubicación real en el navegador de prueba; reducción de coordenadas, precisión y permisos se comprueban en las pruebas automatizadas. El acceso administrativo se comprueba mediante SQL con rollback.
 
 No se necesitan cookies analíticas, una API de geocodificación de pago ni nuevas cuentas. Se utilizan los recursos existentes de Vercel/Supabase y el directorio GeoNames bajo CC BY 4.0; ver `server/data/README.md`.
