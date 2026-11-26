@@ -1,5 +1,8 @@
 {
   "cleanUrls": false,
+  "functions": {
+    "api/visitor-zone.js": {"includeFiles": "server/data/localities.json.gz"}
+  },
   "headers": [
     {
       "source": "/portal/(.*)",

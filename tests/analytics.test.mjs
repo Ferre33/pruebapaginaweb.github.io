@@ -37,9 +37,9 @@ test('previews pass through without collecting and matchers do not invoke on ass
  for(const path of config.matcher)assert(audienceBucket(req(path)),path);
  assert(!config.matcher.some(p=>p.includes('api/')||p.includes('img/')||p.includes('admin')));
 });
-test('retired browser code only removes old analytics storage, without sending requests',()=>{
+test('legacy session tracking remains removed without starting requests in unsupported pages',()=>{
  const removed=[];
- vm.runInNewContext(fs.readFileSync(new URL('../js/analytics.js',import.meta.url),'utf8'),{localStorage:{removeItem:k=>removed.push(k)},sessionStorage:{removeItem:k=>removed.push(k)},fetch:()=>{throw Error('browser analytics must remain disabled');}});
+ vm.runInNewContext(fs.readFileSync(new URL('../js/analytics.js',import.meta.url),'utf8'),{document:{currentScript:null},localStorage:{removeItem:k=>removed.push(k)},sessionStorage:{removeItem:k=>removed.push(k)},fetch:()=>{throw Error('automatic browser analytics must remain disabled');}});
  assert.deepEqual(removed,['bebepunt.analytics.choice.v1','bebepunt.analytics.session.v1']);
 });
 test('ceremony compositions preserve both materials on both Alma sets',()=>{

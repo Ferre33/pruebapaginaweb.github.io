@@ -1,0 +1,13 @@
+{
+  "source": "https://download.geonames.org/export/dump/",
+  "license": "CC BY 4.0",
+  "files": {
+    "cities1000.zip": "22bfb84d129ead8b9ab11d6236d09f8fea652226ea59c79d7267bdac31b3879a",
+    "ES.zip": "c139cfdbc434bc98086ab2a34d123d759c0b686fe7be38aeb6c69ae7174591d2",
+    "admin1CodesASCII.txt": "2e4867f5397acb056ea26377601b57af37cb4c81399770225018e9e439e91ad3",
+    "admin2Codes.txt": "d06471ff728a59dd494cb84d7c6512719f53f84e5694d1e6275590745a35e42d"
+  },
+  "places": 183894,
+  "spain_places": 29117,
+  "sha256": "8b3c61e7079870def1b796316168a7941e823e9e1fa716192f5fa8a95a05f513"
+}
