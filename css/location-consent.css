@@ -1,0 +1,20 @@
+.zone-preferences{display:block;width:max-content;max-width:100%;margin:20px auto;padding:10px 16px;background:transparent;border:1px solid #b9b2ac;border-radius:6px;color:#45413e;font:inherit;font-size:.875rem;cursor:pointer}
+#zone-panel{position:fixed;right:20px;bottom:20px;z-index:5000;box-sizing:border-box;width:min(490px,calc(100vw - 40px));max-height:min(720px,calc(100dvh - 40px));overflow:auto;padding:24px;background:#fff;color:#45413e;border:1px solid #d6d0ca;border-radius:14px;box-shadow:0 8px 36px #0002;font-family:Comfortaa,sans-serif;font-size:1rem;line-height:1.6;text-align:left}
+#zone-panel[hidden]{display:none!important}
+#zone-panel *{box-sizing:border-box}
+#zone-panel h2{font-size:1.2rem;line-height:1.4;letter-spacing:0;text-transform:none;margin:0 0 12px;color:#45413e}
+#zone-panel p{font-size:1rem;line-height:1.6;margin:10px 0}
+#zone-panel p.zone-detail{font-size:.875rem;color:#625c56}
+#zone-panel a{color:#45413e;text-decoration:underline;text-underline-offset:3px}
+#zone-panel label{display:block;font-size:.95rem;margin:8px 0}
+#zone-panel button{appearance:none;font:inherit;font-size:.9rem;font-weight:600;line-height:1.4;cursor:pointer;background:#f2efeb;color:#45413e;border:1px solid #a49b93;border-radius:6px;padding:12px 14px;min-height:46px;white-space:normal;text-transform:none;letter-spacing:0;box-shadow:none}
+#zone-panel button:hover{background:#e6e1dc}
+#zone-panel button:focus-visible,#zone-panel input:focus-visible,#zone-panel select:focus-visible,.zone-preferences:focus-visible{outline:3px solid #6a625a;outline-offset:3px}
+#zone-panel .zone-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+#zone-panel .zone-actions button{flex:1 1 180px}
+#zone-panel input,#zone-panel select{min-width:0;width:100%;font:inherit;font-size:1rem;padding:12px;color:#45413e;background:#fff;border:1px solid #a49b93;border-radius:6px}
+#zone-panel .zone-search-row{display:flex;gap:8px}
+#zone-panel .zone-search-row input{flex:1}
+#zone-panel .zone-search-row button{flex:0 0 auto}
+#zone-status:empty{display:none}
+@media(max-width:600px){#zone-panel{right:10px;bottom:10px;width:calc(100vw - 20px);max-height:calc(100dvh - 20px);padding:18px}#zone-panel .zone-actions button{flex-basis:100%}}
