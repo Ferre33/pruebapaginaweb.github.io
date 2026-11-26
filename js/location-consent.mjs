@@ -69,7 +69,8 @@ export function startLocationConsent({rootURL=new URL('../',import.meta.url),del
    controller?.abort();controller=new AbortController();
    const timeout=setTimeout(()=>controller?.abort(),12000);
    try{
-    const response=await fetch(new URL('api/visitor-zone',rootURL),{method:'POST',credentials:'omit',referrerPolicy:'no-referrer',headers:{'Content-Type':'application/json'},body:JSON.stringify(body),signal:controller.signal});
+    // Protected previews need their existing Vercel session; public measurement never sends cookies.
+    const response=await fetch(new URL('api/visitor-zone',rootURL),{method:'POST',credentials:preview&&!production?'same-origin':'omit',referrerPolicy:'no-referrer',headers:{'Content-Type':'application/json'},body:JSON.stringify(body),signal:controller.signal});
     const result=await response.json();if(!response.ok)throw Error(result.error||'unavailable');return result;
    }finally{clearTimeout(timeout);}
   }
